@@ -24,7 +24,7 @@
                 <li>Log In</li>
             </ul>
     
-            <h3>Información de contacto</h3>
+            <h3>Contact information</h3>
             <p>
                 Sed varius enim lorem ullamcorper dolore aliquam aenean ornare velit lacus, 
                 ac varius enim lorem ullamcorper dolore. Proin sed aliquam facilisis ante 
@@ -104,18 +104,44 @@
         <section>
 
             <h2>Form</h2>
-            <div>
-                <input type="text" name="Name" placeholder="Name">
-            </div>
-            <div>
-                <input type="email" name="email" placeholder="Email">
-            </div>
-            <div>
-                <label>Message</label>
-                <textarea name="message" cols="30" rows="6" placeholder="Message"></textarea>
-            </div>
-            <input type="submit" value="Send">
-            <input type="submit" value="Return">
+            
+            <form action="/action_page.php" autocomplete="on">
+                
+                <ul>
+                    <li>
+                        <label for="name"> Name:</label>
+                        <input id="name" type="text" name="Name" placeholder="Name">
+                    </li>
+                    <li>
+            
+                        <label for="email"> Email:</label>
+                        <input id="email" type="email" name="email" placeholder="Email">
+                    </li>
+                    <li>
+                        <h3>Contact area:</h3>
+                    </li>
+                    <li>
+                        <input id="area1" type="checkbox" name="area1" value="humanresources">
+                        <label for="area1"> Human Resources</label>
+                    </li>
+                    <li>
+                        <input id="area2" type="checkbox" name="area2" value="systems">
+                        <label for="area2"> Systems</label>
+                    </li>
+                    <li>
+                        <input id="area3" type="checkbox" name="area3" value="commercialization">
+                        <label for="area3"> Commercialization</label>
+                    </li>
+                    <li>
+                        <label>Message:</label>
+                        <textarea name="message" cols="30" rows="6" placeholder="Message"></textarea>
+                    </li>
+                </ul>
+
+                <input type="submit" value="Send">
+                <input type="reset" value="Reset">
+
+            </form>
 
         </section>
 
