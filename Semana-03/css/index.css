@@ -1,0 +1,33 @@
+.main-header{
+    border: 5px black solid;
+    font-family: Roboto; /* AGREGAR MAS LETRAS*/
+    font-size: 40px;
+    font-weight: bold;
+    /* line-height: 1.6 em (es para agregar interlineado en texto)*/
+    margin: 0;
+    color: red;
+    background-color: aqua;
+    display: block; /*corregir*/
+    width: 100%;
+    padding: 10px;
+
+}
+
+.clr{
+    clear: both;
+}
+
+.left-bar{
+    float:left;
+    width: 30%;
+    background-color: blueviolet;
+    
+
+
+}
+
+.main-block{
+    float:right;
+    width: 70%;
+
+}
