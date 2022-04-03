@@ -1,16 +1,44 @@
-.main-header{
-    border: 5px black solid;
+body{
     font-family: Roboto; /* AGREGAR MAS LETRAS*/
+}
+
+h2{
     font-size: 40px;
     font-weight: bold;
+}
+
+h3{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+h4{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+section{
+    margin-left: 70px;
+}
+
+article{
+    display: inline-block;
+    width: 48%;
+    border: 2px black solid;
+
+}
+
+.main-header{
+    border: 2px black solid;
+    font-family: Roboto; /* AGREGAR MAS LETRAS*/
+    font-size: 50px;
+    font-weight: bold;
     /* line-height: 1.6 em (es para agregar interlineado en texto)*/
-    margin: 0;
     color: red;
     background-color: aqua;
     display: block; /*corregir*/
-    width: 100%;
+    width: 100%; /*corregir*/
     padding: 10px;
-
 }
 
 .clr{
@@ -19,15 +47,50 @@
 
 .left-bar{
     float:left;
-    width: 30%;
+    width: 20%;
     background-color: blueviolet;
-    
-
-
+    box-sizing: border-box;
 }
 
 .main-block{
     float:right;
-    width: 70%;
+    width: 80%;
+    box-sizing: border-box;
+}
 
+.first-h2{
+    border: 2px black solid;
+    padding-top: 50px;
+}
+
+.class-app{
+    float:left;
+    width: 50%;
+    border: 2px black solid;
+    /*display: inline-block;
+    width: 100%;*/
+}
+
+.main-img{
+    float:right;
+    border: 2px black solid;
+}
+
+.functionalities{
+    border: 2px black solid;
+
+}
+
+.functionalities ul{
+    border: 2px black solid;
+    list-style: circle;
+    padding-left: 80px;
+}
+
+.functionalities li{
+    display: inline-block;
+    width: 40%;
+    padding-right: 40px;
+    border: 2px black solid;
+    
 }
