@@ -36,6 +36,10 @@ article {
     margin-right: 40px;
 }
 
+article p {
+    color: #958888;
+}
+
 article h4 {
     margin: 20px 0px;
 }
@@ -95,6 +99,10 @@ article h4 {
     display: block;
     width: 50%;
     float: left;
+}
+
+.class-app p {
+    color: #958888;
 }
 
 .class-app h3{
@@ -191,6 +199,7 @@ article h4 {
     width: 25%;
     margin-right: 30px;
     margin-bottom: 20px;
+    color: #958888;
 
 }
 
@@ -231,7 +240,7 @@ article h4 {
 }
 
 .item-list li {
-    a
+    color: #958888;
 }
 
 .main-footer {
