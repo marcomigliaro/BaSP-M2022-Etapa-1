@@ -1,3 +1,5 @@
+/* Color gris: #958888 */
+
 body {
     font-family: 'Roboto'; /* AGREGAR MAS LETRAS*/
 }
@@ -18,9 +20,11 @@ h4 {
 }
 
 section {
-    margin-left: 30px;
-    margin-top: 50px;
-    border-top: 5px green; /*Fix this*/
+    margin-left: 15px;
+    margin-top: 25px;
+    padding-top: 25px;
+    padding-left: 15px;
+    border-top: 3px #AACE9B solid; /*Fix this*/
 }
 
 article {
@@ -28,7 +32,7 @@ article {
     width: 29%;
     /*border: 2px black solid;*/
     margin-top: 20px;
-    margin-left: 40px;
+    margin-left: 120px;
     margin-right: 40px;
 }
 
@@ -66,6 +70,8 @@ article h4 {
     height: 100%;
     border: 2px black solid;
     box-sizing: border-box;
+    background-color: #dcdada;
+    padding: 5px;
 }
 
 .main-block {
@@ -102,7 +108,7 @@ article h4 {
 }
 
 .functionalities {
-    border: 1px black solid;
+    /*border: 1px black solid;*/
     margin-top: 50px;
 }
 
@@ -123,11 +129,17 @@ article h4 {
 }
 
 .my-form {
-    padding: 20 px;
+    border: #373867 1px solid;
+    position: relative;
+    left: 80px;
+    top: 30px;
 }
 
 .my-form .form-group {
-    padding-bottom: 50px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    /*display: inline-block;
+    width: 50%;*/
 }
 
 .my-form label {
@@ -144,3 +156,97 @@ article h4 {
     width: 300px;
 }
 
+.my-form input [type=checkbox] {
+    display: inline;
+}
+
+.my-form .form-group2 {
+    position: absolute;
+    bottom: 250px;
+    left: 500px;
+    border: #373867 1px solid;
+}
+
+.my-form .form-group2 input {
+    position: relative;
+    top: 80px;
+    right: 320px;
+    padding: 5px 25px;
+    margin: 0px; /* TENGO QUE SEPARAR LOS BOTONES */
+}
+
+.my-form .form-group2 textarea {
+    padding: 8px;
+    width: 300px;
+}
+
+.history {
+    border: #373867 2px;
+    margin-left: 100px;
+}
+
+.history p{
+    border: 2px black solid;
+    display: inline-block;
+    width: 25%;
+    margin-right: 30px;
+    margin-bottom: 20px;
+
+}
+
+/*.class-app {
+    left: 30px;
+    width: 50%;
+    padding-top: 40px;
+    padding-left: 30px;
+    border: 2px black solid;
+    line-height: 25px;
+    display: block;
+    width: 50%;
+    float: left;*/
+}
+
+.history img {
+    display: inline;
+    /*padding-top: 40px;
+    padding-left: 80px;  */ 
+}
+
+.items {
+    text-align: center;
+}
+
+.item-list {
+    border: #373867 1px solid;
+    display: inline-block;
+    margin-left: 100px;
+    margin-right: 20px;
+    margin-bottom: 50px;
+    text-align: center;
+
+}
+
+.item-list ol {
+    a
+}
+
+.item-list li {
+    a
+}
+
+.main-footer {
+    text-align: center;
+}
+
+.main-footer div {
+    margin-bottom: 0px;
+}
+
+.main-footer img {
+    margin-bottom: 30px;
+}
+
+.main-footer p {
+    margin-bottom: 15px;
+    color: #958888;
+}
