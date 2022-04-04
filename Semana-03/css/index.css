@@ -1,69 +1,80 @@
-body{
-    font-family: Roboto; /* AGREGAR MAS LETRAS*/
+body {
+    font-family: 'Roboto'; /* AGREGAR MAS LETRAS*/
 }
 
-h2{
+h2 {
     font-size: 40px;
     font-weight: bold;
 }
 
-h3{
+h3 {
     font-size: 30px;
     font-weight: bold;
 }
 
-h4{
+h4 {
     font-size: 20px;
     font-weight: bold;
 }
 
-section{
+section {
     margin-left: 70px;
 }
 
-article{
+article {
     display: inline-block;
     width: 48%;
     border: 2px black solid;
 
 }
 
-.main-header{
+.main-header {
     border: 2px black solid;
-    font-family: Roboto; /* AGREGAR MAS LETRAS*/
     font-size: 50px;
     font-weight: bold;
     /* line-height: 1.6 em (es para agregar interlineado en texto)*/
-    color: red;
-    background-color: aqua;
-    display: block; /*corregir*/
-    width: 100%; /*corregir*/
-    padding: 10px;
+    color: #373867;
+    background-color: #F6FOE3;
+    /*display: block; corregir*/
+   /* width: 100%; /*corregir*/
+    padding: 30px;
+     
+    
 }
 
-.clr{
+.main-header img {
+    position: relative;
+    right: 30px;
+    bottom: 100px;
+    float: right;
+    padding: 30px;
+
+
+}
+
+.clr {
     clear: both;
 }
 
-.left-bar{
+.left-bar {
     float:left;
     width: 20%;
-    background-color: blueviolet;
+    border: 2px black solid;
     box-sizing: border-box;
 }
 
-.main-block{
+.main-block {
     float:right;
     width: 80%;
     box-sizing: border-box;
 }
 
-.first-h2{
+.first-h2 {
     border: 2px black solid;
     padding-top: 50px;
 }
 
-.class-app{
+.class-app {
     float:left;
     width: 50%;
     border: 2px black solid;
@@ -71,26 +82,51 @@ article{
     width: 100%;*/
 }
 
-.main-img{
+.class-app img {
     float:right;
     border: 2px black solid;
 }
 
-.functionalities{
+.functionalities {
     border: 2px black solid;
 
 }
 
-.functionalities ul{
+.functionalities ul {
     border: 2px black solid;
     list-style: circle;
     padding-left: 80px;
 }
 
-.functionalities li{
+.functionalities li {
     display: inline-block;
     width: 40%;
     padding-right: 40px;
     border: 2px black solid;
     
 }
+
+.my-form {
+    padding: 20 px;
+}
+
+.my-form .form-group {
+    padding-bottom: 50px;
+}
+
+.my-form label {
+    display: block;
+}
+
+.my-form input[type=text] {
+    padding: 8px;
+    width: 300px;
+
+}
+
+.my-form input[type=email] {
+    padding: 8px;
+    width: 300px;
+
+}
+
