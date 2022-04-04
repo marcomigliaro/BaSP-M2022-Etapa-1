@@ -18,28 +18,34 @@ h4 {
 }
 
 section {
-    margin-left: 70px;
+    margin-left: 30px;
+    margin-top: 50px;
+    border-top: 5px green; /*Fix this*/
 }
 
 article {
     display: inline-block;
-    width: 48%;
-    border: 2px black solid;
+    width: 29%;
+    /*border: 2px black solid;*/
+    margin-top: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
 
+article h4 {
+    margin: 20px 0px;
 }
 
 .main-header {
-    border: 2px black solid;
+    border: 1px #373867 solid;
     font-size: 50px;
     font-weight: bold;
     /* line-height: 1.6 em (es para agregar interlineado en texto)*/
     color: #373867;
-    background-color: #F6FOE3;
+    /*background-color: #F6FOE3;*/
     /*display: block; corregir*/
    /* width: 100%; /*corregir*/
-    padding: 30px;
-     
-    
+    padding: 30px; 
 }
 
 .main-header img {
@@ -48,8 +54,6 @@ article {
     bottom: 100px;
     float: right;
     padding: 30px;
-
-
 }
 
 .clr {
@@ -59,6 +63,7 @@ article {
 .left-bar {
     float:left;
     width: 20%;
+    height: 100%;
     border: 2px black solid;
     box-sizing: border-box;
 }
@@ -75,35 +80,46 @@ article {
 }
 
 .class-app {
-    float:left;
+    left: 30px;
     width: 50%;
+    padding-top: 40px;
+    padding-left: 30px;
     border: 2px black solid;
-    /*display: inline-block;
-    width: 100%;*/
+    line-height: 25px;
+    display: block;
+    width: 50%;
+    float: left;
 }
 
-.class-app img {
-    float:right;
-    border: 2px black solid;
+.class-app h3{
+    margin-bottom: 40px;
+}
+
+.img-app {
+    display: inline-block;
+    padding-top: 40px;
+    padding-left: 80px;   
 }
 
 .functionalities {
-    border: 2px black solid;
-
+    border: 1px black solid;
+    margin-top: 50px;
 }
 
 .functionalities ul {
-    border: 2px black solid;
+    border: 1px black solid;
     list-style: circle;
     padding-left: 80px;
 }
 
 .functionalities li {
     display: inline-block;
-    width: 40%;
-    padding-right: 40px;
-    border: 2px black solid;
-    
+    width: 20%;
+    margin-left: 130px;
+    margin-right: 75px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border: 1px black solid;   
 }
 
 .my-form {
@@ -121,12 +137,10 @@ article {
 .my-form input[type=text] {
     padding: 8px;
     width: 300px;
-
 }
 
 .my-form input[type=email] {
     padding: 8px;
     width: 300px;
-
 }
 
