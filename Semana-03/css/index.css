@@ -1,7 +1,12 @@
 /* Color gris: #958888 */
 
 body {
-    font-family: 'Roboto'; /* AGREGAR MAS LETRAS*/
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+h1 {
+    font-size: 45px;
 }
 
 h2 {
@@ -44,44 +49,103 @@ article h4 {
     margin: 20px 0px;
 }
 
-.main-header {
-    border: 1px #373867 solid;
-    font-size: 50px;
-    font-weight: bold;
-    /* line-height: 1.6 em (es para agregar interlineado en texto)*/
-    color: #373867;
-    /*background-color: #F6FOE3;*/
-    /*display: block; corregir*/
-   /* width: 100%; /*corregir*/
-    padding: 30px; 
-}
-
-.main-header img {
-    position: relative;
-    right: 30px;
-    bottom: 100px;
-    float: right;
-    padding: 30px;
-}
-
-.clr {
-    clear: both;
-}
-
 .left-bar {
-    float:left;
+    position:fixed;
+    left;
     width: 20%;
     height: 100%;
-    border: 2px black solid;
     box-sizing: border-box;
-    background-color: #dcdada;
+    background-color: #DCDADA; 
+}
+
+.bar-form {
+    padding: 20px;
+    background-color: #EBEBEB;
+}
+
+.bar-form input {
     padding: 5px;
+    border: 1px solid #373867;
+    border-radius: 5px;
+}
+
+.bar-form img {
+    margin-left: 10px;
+    margin-top: 3px;
+}
+
+.bar-div {
+    margin-top: 15px;
+    margin-left: 10px;
+    padding-right: 30px;
+}
+
+.bar-div label {
+    font-weight: bold;
+    text-decoration: underline 3px;
+    text-decoration-color: #AACE9B;
+    font-size: 22px;
+}
+
+.bar-div li {
+    padding-top: 25px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid #AACE9B;
+}
+
+.contact-inf {
+    margin-top: 35px;
+}
+
+.contact-inf p {
+    margin-top: 15px;
+    color: #958888;
+}
+
+.bar-div-info {
+    padding-top: 20px;
+    padding-bottom: 8px;
+    font-size: 15px;
+    border-bottom: 1px solid #AACE9B;
+}
+
+.bar-div-info img{
+    float: left;
+    padding-right: 7px;
 }
 
 .main-block {
     float:right;
     width: 80%;
     box-sizing: border-box;
+}
+
+.main-header {
+    position: fixed;
+    font-weight: bold;
+    /* line-height: 1.6 em (es para agregar interlineado en texto)*/
+    color: #373867;
+    /*background-color: #F6FOE3;*/
+    /*display: block; corregir*/
+   /* width: 100%; /*corregir*/
+    padding: 20px;
+    padding-right: 61.3%;
+    height: 83px;
+    box-sizing: border-box;
+    background-color: white;
+    box-shadow: 0px 8px 16px rgba(50, 50, 71, 0.06);
+}
+
+.main-header img {
+    position: absolute;
+    left: 999.9px;
+    bottom: 0px;
+    float: right;
+    
+}
+
+.clr {
+    clear: both;
 }
 
 .first-h2 {
