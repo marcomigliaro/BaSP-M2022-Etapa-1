@@ -176,7 +176,6 @@ article h4 {
 
 .functionalities ul {
     margin-top: 30px;
-    padding-left: 0px;
 }
 
 .functionalities li {
@@ -191,61 +190,78 @@ article h4 {
     color: #373867;
 }
 
-.items {
+.circle {
     font-weight: bold;
     color: #34636E;
 }
 
 .my-form {
-    border: #373867 1px solid;
     position: relative;
-    left: 80px;
+    left: 70px;
     top: 30px;
+    margin-bottom: 80px;
 }
 
 .my-form .form-group {
     padding-top: 30px;
     padding-bottom: 30px;
-    /*display: inline-block;
-    width: 50%;*/
 }
 
-.my-form label {
+.column1 {
+    display: inline-block;
+}
+
+.form-group label {
     display: block;
 }
 
-.my-form input[type=text] {
+.my-form .form-group input[type=text] {
     padding: 8px;
     width: 300px;
 }
 
-.my-form input[type=email] {
+.my-form .form-group input[type=email] {
     padding: 8px;
     width: 300px;
 }
 
-.my-form input [type=checkbox] {
-    display: inline;
+.my-form .form-checkbox {
+    display: inline-block;
+}
+
+.check {
+    margin-top: 8px;
+    margin-bottom: 8px;
 }
 
 .my-form .form-group2 {
-    position: absolute;
-    bottom: 250px;
-    left: 500px;
-    border: #373867 1px solid;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 30px;
+    margin-left: 150px;
+}
+
+.form-group2 label {
+    display: block;
 }
 
 .my-form .form-group2 input {
-    position: relative;
-    top: 80px;
-    right: 320px;
-    padding: 5px 25px;
-    margin: 0px; /* TENGO QUE SEPARAR LOS BOTONES */
+    padding: 5px 15px;
 }
 
 .my-form .form-group2 textarea {
     padding: 8px;
     width: 300px;
+}
+
+.buttons {
+    display: block;
+    margin-top: 35px;
+}
+
+.buttons .reset {
+    margin-left: 30px;
+    padding-left: 20px;
 }
 
 .history {
