@@ -1,0 +1,16 @@
+.main-footer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: #782424;
+}
+
+.main-footer img {
+    margin-bottom: 15px;
+}
+
+.main-footer p {
+    margin-bottom: 10px;
+    color: #958888;
+}
