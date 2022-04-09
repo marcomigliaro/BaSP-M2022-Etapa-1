@@ -1,0 +1,45 @@
+.main-block {
+    width: 80%;
+    padding-right: 70px;
+    /* box-sizing: border-box; */
+}
+
+section {
+    margin-left: 40px;
+    margin-top: 30px;
+    padding-bottom: 50px;
+    border-bottom: 3px #AACE9B solid;
+    /* background-color: #AACE9B; */
+}
+/* Section 1 */
+
+.first-h2 {
+    padding-top: 60px;
+    padding-bottom: 5px;
+    border-bottom: solid 3px #AACE9B;
+    margin-bottom: 40px;
+}
+
+.class-app {
+    display: flex;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    /* padding-top: 40px;
+    padding-left: 30px;
+    border: black 1px solid; */
+}
+
+.class-app h3 {
+    margin-bottom: 40px;
+    padding-right: 79%;
+}
+
+.class-app p {
+    display: flex;
+    flex-basis: 35%;
+    color: #958888;
+    line-height: 20px;
+    /* border: #958888 1px solid; */
+}

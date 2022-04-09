@@ -1,0 +1,17 @@
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px; /* maybe delete this */
+    /* box-sizing: border-box; */
+    background-color: white;
+    /* background-color: aqua; */
+    box-shadow: 0px 8px 16px rgba(50, 50, 71, 0.06);
+    color: #373867; 
+    font-weight: bold; 
+}
+
+/* .main-header img {
+   
+} */

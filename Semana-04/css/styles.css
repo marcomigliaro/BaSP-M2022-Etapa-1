@@ -1,11 +1,11 @@
-/* Color gris: #958888 */
-
 body {
+    flex-wrap: wrap;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 
     Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
 }
 
-/* h1 {
+h1 {
     font-size: 45px;
 }
 
@@ -24,13 +24,7 @@ h4 {
     font-weight: bold;
 }
 
-section {
-    margin-left: 40px;
-    margin-top: 25px;
-    padding-top: 25px;
-    border-top: 3px #AACE9B solid; 
-}
-
+/* 
 article {
     display: inline-block;
     width: 35%;
@@ -90,6 +84,11 @@ article h4 {
     border-bottom: 1px solid #AACE9B;
 }
 
+.bar-div a , .bar-div-info a {
+    color: black;
+    text-decoration: none;
+}
+
 .left-bar .bar-div .contact-inf {
     margin-top: 35px;
 }
@@ -109,65 +108,6 @@ article h4 {
 .left-bar .bar-div .bar-div-info img{
     float: left;
     padding-right: 7px;
-}
-
-.main-block {
-    float:right;
-    width: 80%;
-    padding-right: 70px;
-    box-sizing: border-box;
-}
-
-.main-header {
-    position: fixed;
-    padding: 20px;
-    padding-right: 61.3%;
-    height: 83px;
-    box-sizing: border-box;
-    background-color: white;
-    box-shadow: 0px 8px 16px rgba(50, 50, 71, 0.06);
-    color: #373867; 
-    font-weight: bold; 
-}
-
-.main-header img {
-    position: absolute;
-    left: 999.9px;
-    bottom: 0px;
-    float: right;
-}
-
-.clr {
-    clear: both;
-}
-
-.first-h2 {
-    padding-top: 60px;
-    padding-bottom: 5px;
-    border-bottom: solid 3px #AACE9B;
-}
-
-.class-app {
-    float: left;
-    width: 40%;
-    padding-top: 40px;
-    padding-left: 30px;
-    line-height: 20px;
-    
-}
-
-.class-app p {
-    color: #958888;
-}
-
-.class-app h3{
-    margin-bottom: 40px;
-}
-
-.img-app {
-    display: inline-block;
-    padding-top: 60px;
-    padding-left: 130px;
 }
 
 .functionalities {
