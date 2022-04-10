@@ -1,6 +1,7 @@
 .left-bar {
-    /* position:fixed; */
-    left;
+    /* position: fixed; */
+    display: flex;
+    flex-direction: column;
     width: 20%;
     height: 100%;
     box-sizing: border-box;
@@ -11,36 +12,46 @@
     color: #AACE9B;
 }
 
-.left-bar .bar-form {
-    padding: 20px;
+.bar-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 85px;
+    /* padding: 20px; */
     background-color: #EBEBEB;
 }
 
-.left-bar .bar-form input {
+.bar-form label {
+    /* background-color: aqua; */
+    width: 65%;
+}
+
+.bar-form input {
     padding: 5px;
     border: 1px solid #373867;
     border-radius: 5px;
 }
 
-.left-bar .bar-form img {
+.bar-form img {
     margin-left: 10px;
     margin-top: 3px;
 }
 
-.left-bar .bar-div {
+.bar-div {
     margin-top: 15px;
     margin-left: 10px;
     padding-right: 30px;
 }
 
-.left-bar .bar-div label {
+.bar-div label {
     font-weight: bold;
     text-decoration: underline 3px;
     text-decoration-color: #AACE9B;
     font-size: 22px;
 }
 
-.left-bar .bar-div li {
+.bar-div li {
     padding-top: 25px;
     padding-bottom: 4px;
     border-bottom: 1px solid #AACE9B;
@@ -51,23 +62,23 @@
     text-decoration: none;
 }
 
-.left-bar .bar-div .contact-inf {
+.contact-inf {
     margin-top: 35px;
 }
 
-.left-bar .bar-div .contact-inf p {
+.contact-inf p {
     margin-top: 15px;
     color: #958888;
 }
 
-.left-bar .bar-div .bar-div-info {
+.bar-div-info {
     padding-top: 20px;
     padding-bottom: 8px;
     border-bottom: 1px solid #AACE9B;
     font-size: 15px;
 }
 
-.left-bar .bar-div .bar-div-info img{
+.bar-div-info img{
     float: left;
     padding-right: 7px;
 }

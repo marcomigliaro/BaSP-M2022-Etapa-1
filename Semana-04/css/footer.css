@@ -1,17 +1,16 @@
-.main-footer {
+footer {
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     margin-top: 20px;
-    /* background-color: #782424; */
 }
 
-.main-footer img {
+footer img {
     margin-bottom: 15px;
 }
 
-.main-footer p {
+footer p {
     margin-bottom: 10px;
     color: #958888;
 }

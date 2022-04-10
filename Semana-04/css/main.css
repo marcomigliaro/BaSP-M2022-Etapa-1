@@ -2,10 +2,10 @@
     d
 }
 
-.main-block {
+main {
     width: 80%;
     padding-right: 70px;
-    /* box-sizing: border-box; */
+    box-sizing: border-box;
 }
 
 section {
@@ -16,7 +16,7 @@ section {
 }
 /* Section 1 */
 
-.first-h2 {
+h2 {
     margin-bottom: 40px;
     padding-top: 60px;
     padding-bottom: 5px;
