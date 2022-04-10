@@ -1,0 +1,73 @@
+.left-bar {
+    /* position:fixed; */
+    left;
+    width: 20%;
+    height: 100%;
+    box-sizing: border-box;
+    background-color: #DCDADA; 
+}
+
+.left-bar a:hover {
+    color: #AACE9B;
+}
+
+.left-bar .bar-form {
+    padding: 20px;
+    background-color: #EBEBEB;
+}
+
+.left-bar .bar-form input {
+    padding: 5px;
+    border: 1px solid #373867;
+    border-radius: 5px;
+}
+
+.left-bar .bar-form img {
+    margin-left: 10px;
+    margin-top: 3px;
+}
+
+.left-bar .bar-div {
+    margin-top: 15px;
+    margin-left: 10px;
+    padding-right: 30px;
+}
+
+.left-bar .bar-div label {
+    font-weight: bold;
+    text-decoration: underline 3px;
+    text-decoration-color: #AACE9B;
+    font-size: 22px;
+}
+
+.left-bar .bar-div li {
+    padding-top: 25px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid #AACE9B;
+}
+
+.bar-div a , .bar-div-info a {
+    color: black;
+    text-decoration: none;
+}
+
+.left-bar .bar-div .contact-inf {
+    margin-top: 35px;
+}
+
+.left-bar .bar-div .contact-inf p {
+    margin-top: 15px;
+    color: #958888;
+}
+
+.left-bar .bar-div .bar-div-info {
+    padding-top: 20px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #AACE9B;
+    font-size: 15px;
+}
+
+.left-bar .bar-div .bar-div-info img{
+    float: left;
+    padding-right: 7px;
+}
