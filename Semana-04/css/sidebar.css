@@ -3,7 +3,7 @@
     display: flex;
     flex-direction: column;
     width: 20%;
-    height: 100%;
+    /* height: 100%; */
     box-sizing: border-box;
     background-color: #DCDADA; 
 }
@@ -12,58 +12,76 @@
     color: #AACE9B;
 }
 
-.bar-form {
+.search {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    /* flex-wrap: wrap; */
     height: 85px;
     /* padding: 20px; */
     background-color: #EBEBEB;
 }
 
-.bar-form label {
+.search label {
     /* background-color: aqua; */
     width: 65%;
 }
 
-.bar-form input {
+.search input {
+    /* display: flex;
+    flex-basis: 2%; */
     padding: 5px;
     border: 1px solid #373867;
     border-radius: 5px;
 }
 
-.bar-form img {
+.search img {
     margin-left: 10px;
     margin-top: 3px;
 }
 
-.bar-div {
+.menu {
     margin-top: 15px;
     margin-left: 10px;
     padding-right: 30px;
+    /* background-color: aqua; */
 }
 
-.bar-div label {
+.menu label {
     font-weight: bold;
     text-decoration: underline 3px;
     text-decoration-color: #AACE9B;
     font-size: 22px;
 }
 
-.bar-div li {
-    padding-top: 25px;
-    padding-bottom: 4px;
-    border-bottom: 1px solid #AACE9B;
+.menu ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100px;
+    margin-top: 20px;
+    /* background-color: #AACE9B; */
 }
 
-.bar-div a , .bar-div-info a {
+.menu li {
+    /* padding-top: 25px; */
+    padding-bottom: 4px;
+    border-bottom: 1px solid #AACE9B;
+    /* border: black 1px solid; */
+}
+
+.menu a , .mail-adress a {
     color: black;
     text-decoration: none;
 }
 
 .contact-inf {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     margin-top: 35px;
+    /* background-color: aqua; */
 }
 
 .contact-inf p {
@@ -71,14 +89,22 @@
     color: #958888;
 }
 
-.bar-div-info {
+.mail-adress {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     padding-top: 20px;
     padding-bottom: 8px;
     border-bottom: 1px solid #AACE9B;
     font-size: 15px;
+    background-color: aqua;
 }
 
-.bar-div-info img{
+.mail-adress img{
     float: left;
     padding-right: 7px;
+}
+
+.mail-adress a {
+    flex-shrink: 2;
 }
