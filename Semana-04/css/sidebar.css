@@ -1,11 +1,7 @@
 .left-bar {
     position: fixed;
-    /* display: flex;
-    flex-direction: column; */
     width: 200px;
     height: 100%;
-    /* width: 20%; */
-    /* box-sizing: border-box; */
     background-color: #DCDADA; 
 }
 
