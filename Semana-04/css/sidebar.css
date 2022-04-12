@@ -1,11 +1,11 @@
 .left-bar {
     position: fixed;
-    display: flex;
-    flex-direction: column;
+    /* display: flex;
+    flex-direction: column; */
     width: 200px;
-    /* width: 20%; */
     height: 100%;
-    box-sizing: border-box;
+    /* width: 20%; */
+    /* box-sizing: border-box; */
     background-color: #DCDADA; 
 }
 
@@ -18,20 +18,16 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* flex-wrap: wrap; */
     height: 85px;
-    /* padding: 20px; */
     background-color: #EBEBEB;
 }
 
 .search label {
-    /* background-color: aqua; */
-    width: 65%;
+    align-self: flex-start;
+    padding-left: 11px;
 }
 
 .search input {
-    /* display: flex;
-    flex-basis: 2%; */
     padding: 5px;
     border: 1px solid #373867;
     border-radius: 5px;
@@ -46,7 +42,6 @@
     margin-top: 15px;
     margin-left: 10px;
     padding-right: 30px;
-    /* background-color: aqua; */
 }
 
 .menu label {
@@ -62,14 +57,11 @@
     justify-content: space-between;
     height: 100px;
     margin-top: 20px;
-    /* background-color: #AACE9B; */
 }
 
 .menu li {
-    /* padding-top: 25px; */
     padding-bottom: 4px;
     border-bottom: 1px solid #AACE9B;
-    /* border: black 1px solid; */
 }
 
 .menu a , .mail-adress a {
@@ -78,11 +70,7 @@
 }
 
 .contact-inf {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     margin-top: 35px;
-    /* background-color: aqua; */
 }
 
 .contact-inf p {
@@ -97,15 +85,5 @@
     padding-top: 20px;
     padding-bottom: 8px;
     border-bottom: 1px solid #AACE9B;
-    font-size: 15px;
-    background-color: aqua;
-}
-
-.mail-adress img{
-    float: left;
-    padding-right: 7px;
-}
-
-.mail-adress a {
-    flex-shrink: 2;
+    font-size: 13px;
 }
