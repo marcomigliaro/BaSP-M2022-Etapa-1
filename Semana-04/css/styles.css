@@ -76,6 +76,13 @@ h4 {
         order: 0;
     }
 
+    .items {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin-left: 0px;
+    }
+
 }
 
 @media (min-width: 768px){ 
