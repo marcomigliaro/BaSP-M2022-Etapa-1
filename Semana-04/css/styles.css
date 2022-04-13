@@ -61,6 +61,21 @@ h4 {
         justify-content: space-around;
     }
 
+    .container-history {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    
+    .column-history {
+        margin-right: 20px;
+        justify-content: space-around;
+    }
+
+    .column-history p {
+        order: 0;
+    }
+
 }
 
 @media (min-width: 768px){ 

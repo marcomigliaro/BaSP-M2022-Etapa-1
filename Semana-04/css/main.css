@@ -134,22 +134,28 @@ section {
 
 /* Section 5 */
 
-.history {
+.column-history {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    margin-bottom: 15px;
+    /* align-items: center;
     justify-content: space-around;
-    flex-wrap: wrap;
+    flex-wrap: wrap; */
     /* height: 220px; */
 }
 
-.history p{
-    flex-basis: 40%;
-    margin: 0 25px;
+.column-history p{
+    /* flex-basis: 40%; */
+order: -1;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    /* margin: 0 25px; */
     color: #958888;
 }
 
-.history img {
-    margin: 0 25px;
+.column-history img {
+    /* margin: 0 25px; */
+    align-self: center;
 }
 
 /* Section 6 */
