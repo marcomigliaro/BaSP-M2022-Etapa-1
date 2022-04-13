@@ -24,6 +24,20 @@ With the HTML file done, the style was added with CSS with the objetive of makin
 - <a href="https://www.ciudadano2cero.com/aprender-css-basico-desde-cero/" target="_blank">https://www.ciudadano2cero.com/aprender-css-basico-desde-cero/</a>
 
 
+# Week 4
+Flexbox and Media Queries were used to improve the styling done at week 3. The result was a better view of the landing page and the adition of a responsive design (mobile, tablet and desktop versions).
+
+## Acknowledgments
+
+- <a href="https://www.youtube.com/watch?v=3YW65K6LcIA" target="_blank">Flexbox Crash Course 2022</a>
+
+- <a href="https://www.youtube.com/watch?v=_YUJ37FARrU" target="_blank">Definitive Flexbox guide</a>
+
+- <a href="https://www.w3schools.com/css/css_rwd_mediaqueries.asp" target="_blank">Responsive web design Media Queries</a>
+  
+- <a href="https://www.w3schools.com/css/css_boxmodel.asp" target="_blank">CSS Box Model</a>
+
+
 # Developer
 Email: marcomig96@gmail.com
 
