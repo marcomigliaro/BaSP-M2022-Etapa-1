@@ -37,6 +37,19 @@ Flexbox and Media Queries were used to improve the styling done at week 3. The r
   
 - <a href="https://www.w3schools.com/css/css_boxmodel.asp" target="_blank">CSS Box Model</a>
 
+# Week 5
+This week we created 6 different JavaScript files, where each one of them was focused on independent subjects and had a variety of exercises that were solved by JS code.
+
+
+## Acknowledgments
+
+- <a href="https://www.youtube.com/playlist?list=PLEfmn-5Ho68TYu8hB4NG4pWUIJpRXA8dm" target="_blank">Fundamentals of Programming in JavaScript [Udemy]</a>
+  
+- <a href="https://www.youtube.com/playlist?list=PLEfmn-5Ho68Qg7airyFpWQFP-Abxnvk-y" target="_blank">JavaScript - Statements and Loops [Udemy]</a>
+  
+- <a href="https://www.youtube.com/playlist?list=PLEfmn-5Ho68R2r0JyrYD1m9a14ahL_Ywh" target="_blank">JavaScript - Arrays and Objects [Udemy]</a>
+  
+- <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Guide" target="_blank">Javascript Guide [MDN]</a>
 
 # Developer
 Email: marcomig96@gmail.com
