@@ -39,7 +39,7 @@ console.log('-Exercise 2.d:');
 
 var string2D = 'facilitating';
 
-var stringSubString2D = string2D.substring(0,1).toUpperCase() + string2D.substring(1,12).toLowerCase() ;
+var stringSubString2D = string2D.substring(0,1).toUpperCase() + string2D.substring(1,12).toLowerCase();
 
 console.log(stringSubString2D);
 
