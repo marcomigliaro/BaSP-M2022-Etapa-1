@@ -28,8 +28,8 @@ console.log(completeName);
 
 console.log('-Exercise 1.c:');
 
-var str3 = 'Parque';
-var str4 = 'Acuático';
+var str3 = 'Water';
+var str4 = 'Park';
 
 var length = str3.length + str4.length;
 
