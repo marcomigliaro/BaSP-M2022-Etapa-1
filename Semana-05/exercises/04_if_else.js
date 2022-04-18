@@ -15,7 +15,8 @@ if(number >= 0.5){
 
 console.log(number);
 
-// b. Crear una variable “Age” que contenga un número entero entre 0 y 100 y muestre los siguientes mensajes de alerta:
+// b. Crear una variable “Age” que contenga un número entero entre 0 y 100 y 
+// muestre los siguientes mensajes de alerta:
 // i. “Bebe” si la edad es menor a 2 años;
 // ii. “Niño” si la edad es entre 2 y 12 años;
 // iii. “Adolescente” entre 13 y 19 años;
@@ -28,19 +29,19 @@ console.log('-Exercise 4.b:');
 
 var Age = 25;
 
-if (Age<2) {
+if (Age < 2) {
     alert('Bebe');
-} else if ((Age>=2) && (Age<=12)) {
+} else if ((Age >= 2) && (Age <= 12)) {
     alert('Niño');
-} else if ((Age>=13) && (Age<=19)) {
+} else if ((Age >= 13) && (Age <= 19)) {
     alert('Adolescente');
-} else if ((Age>=20) && (Age<=30)) {
+} else if ((Age >= 20) && (Age <= 30)) {
     alert('Joven');
-} else if ((Age>=31) && (Age<=60)) {
+} else if ((Age >= 31) && (Age <= 60)) {
     alert('Adulto');
-} else if ((Age>=61) && (Age<=75)) {
+} else if ((Age >= 61) && (Age <= 75)) {
     alert('Adulto mayor');
-} else if (Age>=76) {
+} else if (Age >= 76) {
     alert('Anciano');
 }
 

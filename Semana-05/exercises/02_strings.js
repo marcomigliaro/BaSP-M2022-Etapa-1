@@ -6,7 +6,6 @@ console.log('--EXERCISE 2: STRINGS');
 console.log('-Exercise 2.a:');
 
 var string2A = 'smartphones';
-
 console.log(string2A.toUpperCase());
 
 // b. Crear una variable de tipo string con al menos 10 caracteres y generar un nuevo string con los 
@@ -15,9 +14,7 @@ console.log(string2A.toUpperCase());
 console.log('-Exercise 2.b:');
 
 var string2B = 'thermostats';
-
 var stringSubString2B = string2B.substring(0,5);
-
 console.log(stringSubString2B);
 
 // c. Crear una variable de tipo string con al menos 10 caracteres y generar un nuevo string con los 
@@ -26,9 +23,7 @@ console.log(stringSubString2B);
 console.log('-Exercise 2.c:');
 
 var string2C = 'fabrications';
-
 var stringSubString2C = string2C.substring(9,12);
-
 console.log(stringSubString2C);
 
 // d. Crear una variable de tipo string con al menos 10 caracteres y generar un nuevo string 
@@ -38,9 +33,7 @@ console.log(stringSubString2C);
 console.log('-Exercise 2.d:');
 
 var string2D = 'facilitating';
-
 var stringSubString2D = string2D.substring(0,1).toUpperCase() + string2D.substring(1,12).toLowerCase();
-
 console.log(stringSubString2D);
 
 // e.Crear una variable de tipo string con al menos 10 caracteres y algún espacio en blanco. 
@@ -49,9 +42,7 @@ console.log(stringSubString2D);
 console.log('-Exercise 2.e:');
 
 var string2E = 'peter parker';
-
 var index2E = string2E.indexOf(' ');
-
 console.log(index2E);
 
 // f.Crear una variable de tipo string con al menos 2 palabras largas (10 caracteres y algún 
@@ -63,7 +54,8 @@ console.log('-Exercise 2.f:');
 
 var string2F = 'mathematical account';
 
-var newString2F = string2F.substring(0,1).toUpperCase() + string2F.substring(1,string2F.indexOf(' ') + 1).toLowerCase()
+var newString2F = string2F.substring(0,1).toUpperCase() + 
+string2F.substring(1,string2F.indexOf(' ') + 1).toLowerCase()
 + string2F.substring(string2F.indexOf(' ') + 1, string2F.indexOf(' ') + 2).toUpperCase() + 
 string2F.substring(string2F.indexOf(' ') + 2).toLowerCase() ;
 
