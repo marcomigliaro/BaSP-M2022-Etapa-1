@@ -40,7 +40,7 @@ alert(sentence);
 
 console.log('-Exercise 5.d:');
 
-var array5D = [''];
+var array5D = [];
 
 for(var i = 0; i < 10; i++){
     array5D[i] = i;
