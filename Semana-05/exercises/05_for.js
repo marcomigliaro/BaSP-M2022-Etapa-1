@@ -46,4 +46,4 @@ for(var i = 0; i < 10; i++){
     array5D[i] = i;
 }
 
-console.log(array5D);
+console.log('The array is: ' , array5D);

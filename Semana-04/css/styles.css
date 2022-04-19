@@ -39,37 +39,15 @@ h4 {
     }
 
     .container-functionalities ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    height: 180px;
-    }
-
-    .items-func {
-        margin-right: 20px;
-        justify-content: space-around;
+        flex-wrap: nowrap;
     }
 
     .container-article {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-    }
-    
-    .column-article {
-        margin-right: 20px;
-        justify-content: space-around;
+        flex-wrap: nowrap;
     }
 
     .container-history {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-    }
-    
-    .column-history {
-        margin-right: 20px;
-        justify-content: space-around;
+        flex-wrap: nowrap;
     }
 
     .column-history p {
@@ -77,9 +55,7 @@ h4 {
     }
 
     .items {
-        display: flex;
         flex-direction: row;
-        justify-content: space-evenly;
         margin-left: 0px;
     }
 }
@@ -95,13 +71,5 @@ h4 {
 
     .left-bar {
         display: block;
-    }
-
-    .container-app p {
-        flex-basis: 50%;
-    }
-
-    .form-group input[type=text], .form-group input[type=email], .column2 textarea {
-        width: 240px;
     }
 }

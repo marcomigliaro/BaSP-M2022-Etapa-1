@@ -31,14 +31,11 @@
 }
 
 .search img {
-    margin-left: 10px;
-    margin-top: 3px;
+    margin: 3px 0 0 10px;
 }
 
 .menu {
-    margin-top: 15px;
-    margin-left: 10px;
-    padding-right: 30px;
+    margin: 15px 30px 0 10px;
 }
 
 .menu label {
@@ -79,8 +76,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding-top: 20px;
-    padding-bottom: 8px;
+    padding: 20px 0 8px 0;
     border-bottom: 1px solid #AACE9B;
     font-size: 13px;
 }

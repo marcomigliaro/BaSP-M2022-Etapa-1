@@ -72,3 +72,6 @@ function sum6E(x,y){
 }
 
 sum6E(4,5);
+
+//function validate int number: validar q sean enteros o No
+// esa funcion ejecutarla

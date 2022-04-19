@@ -9,9 +9,7 @@ main {
 }
 
 section {
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-top: 30px;
+    margin: 30px 20px 0 20px;
     padding-bottom: 50px;
     border-bottom: 3px #AACE9B solid;
 }
@@ -32,15 +30,24 @@ section {
 
 /* Section 2 */
 
+.container-functionalities ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    height: 180px;
+    }
+
 .items-func {
     display: flex;
     flex-direction: column;
-    width: 90%;
+    flex-basis: 90%;
+    margin-right: 20px;
+    justify-content: space-around;
 }
 
 .container-functionalities li {
     padding: 5px;
-    margin-bottom: 10px;
     border: 1px solid #373867;
     border-radius: 5px; 
     font-size: 20px;
@@ -55,9 +62,17 @@ section {
 
 /* Section 3 */
 
+.container-article {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
 .column-article {
     display: flex;
     flex-direction: column;
+    margin-right: 10px;
 }
 
 .article h4 {
@@ -93,19 +108,13 @@ section {
     padding: 10px;
 }
 
-.form-group input[type=text] {
-    padding: 8px;
-    width: 200px;
-}
-
-.form-group input[type=email] {
+.form-group input[type=text] , .form-group input[type=email] , .column2 textarea {
     padding: 8px;
     width: 200px;
 }
 
 .check {
-    margin-top: 8px;
-    margin-bottom: 8px;
+    margin: 8px 0;
 }
 
 .column2 {
@@ -118,32 +127,34 @@ section {
     padding: 10px;
 }
 
-.column2 textarea {
-    padding: 8px;
-    width: 200px;
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 35px;
 }
 
 .buttons input {
-    margin-top: 35px;
     padding: 5px 15px;
-}
-
-.buttons .reset {
-    margin-left: 30px;
 }
 
 /* Section 5 */
 
+.container-history {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
 .column-history {
     display: flex;
     flex-direction: column;
-    margin-bottom: 15px;
+    justify-content: space-around;
 }
 
 .column-history p{
     order: -1;
-    margin-top: 15px;
-    margin-bottom: 15px;
+    margin: 15px 0;
     color: #958888;
 }
 
@@ -156,6 +167,7 @@ section {
 .items {
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
     margin-left: 20px;
 }
 
