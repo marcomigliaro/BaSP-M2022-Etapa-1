@@ -60,18 +60,33 @@ function sum6D(x,y){
     }
 }
 
-sum6D(8,3);
+sum6D(5,3);
 
 // e. Convertir la validación del ejercicio 6d) en una función separada y llamarla 
 // dentro de la función suma probando que todo siga funcionando igual.
 
 console.log('-Exercise 6.e:');
 
-function sum6E(x,y){
-    return sum6D(x,y);
+function sum6DSecond(x,y){
+    if(typeof x != 'number' || typeof y != 'number'){
+        alert('One of the parameters has an error');
+        return console.log(NaN);
+    } else if (Number.isInteger(x) && Number.isInteger(y)){
+        h = x;
+        k = y;
+        return h && k;
+    } else {
+        alert("Error: there are decimal numbers");
+        h = Math.round(x);
+        k = Math.round(y);
+        return h && k;
+    }
 }
 
-sum6E(4,5);
+function sum6E(x,y){
+    sum6DSecond(x,y);
+    result6E = h + k;
+    return console.log('The result is: ' , result6E);
+}
 
-//function validate int number: validar q sean enteros o No
-// esa funcion ejecutarla
+sum6E(3,7);
