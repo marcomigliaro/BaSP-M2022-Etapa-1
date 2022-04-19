@@ -8,17 +8,17 @@ h1 {
 }
 
 h2 {
+    text-align: center;
     margin-bottom: 40px;
     padding-bottom: 5px;
-    text-align: center;
     border-bottom: solid 3px #AACE9B;
     font-size: 40px;
     font-weight: bold;
 }
 
 h3 {
-    margin-bottom: 30px;
     text-align: center;
+    margin-bottom: 30px;
     font-size: 30px;
     font-weight: bold;
 }
@@ -38,7 +38,7 @@ h4 {
         font-size: 16px;
     }
 
-    .container-functionalities ul {
+    .container-functionalities div {
         flex-wrap: nowrap;
     }
 
@@ -65,11 +65,11 @@ h4 {
     margin-left: 200px;
     }
 
-    .log-menu {
-        display: none;
+    aside {
+        display: block;
     }
 
-    .left-bar {
-        display: block;
+    .log-menu {
+        display: none;
     }
 }

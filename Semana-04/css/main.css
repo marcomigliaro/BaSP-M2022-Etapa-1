@@ -30,7 +30,7 @@ section {
 
 /* Section 2 */
 
-.container-functionalities ul {
+.container-functionalities div {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -38,12 +38,12 @@ section {
     height: 180px;
     }
 
-.items-func {
+.container-functionalities ul {
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     flex-basis: 90%;
     margin-right: 20px;
-    justify-content: space-around;
 }
 
 .container-functionalities li {
@@ -54,7 +54,7 @@ section {
     color: #373867;
 }
 
-.circle {
+.container-functionalities span {
     padding: 3px 2px 15px 2px;
     font-weight: bold;
     color: #34636E;
@@ -92,38 +92,38 @@ section {
     flex-wrap: wrap;
 }
 
-.column1 {
+.column1-form {
     display: flex;
     flex-direction: column;
 }
 
-.form-group {
+.form-name-email {
     display: flex;
     flex-direction: column;
     padding-top: 10px;
     padding-bottom: 30px;
 }
 
-.form-group label {
+.form-name-email label {
     padding: 10px;
 }
 
-.form-group input[type=text] , .form-group input[type=email] , .column2 textarea {
-    padding: 8px;
+.form-name-email input[type=text] , .form-name-email input[type=email] , .column2-form textarea {
     width: 200px;
+    padding: 8px;
 }
 
 .check {
     margin: 8px 0;
 }
 
-.column2 {
+.column2-form {
     display: flex;
     flex-direction: column;
     margin-top: 30px;
 }
 
-.column2 label {
+.column2-form label {
     padding: 10px;
 }
 

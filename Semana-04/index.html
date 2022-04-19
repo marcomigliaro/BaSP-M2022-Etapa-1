@@ -14,7 +14,7 @@
         <link rel="stylesheet" href="./css/styles.css">
     </head>
     <body>
-        <aside class="left-bar">
+        <aside>
             <form class="search">
                 <label for="search">
                     Search:<img src="./img/search-alt-2-regular-24.png" alt="magnifying glass"
@@ -80,16 +80,16 @@
             <section>
                 <h3>Functionalities</h3>
                 <div class="container-functionalities">
-                    <ul>
-                        <div class="items-func">
-                            <li><span class="circle">o</span>Hours log</li>
-                            <li><span class="circle">o</span>Reports</li>
-                        </div>
-                        <div class="items-func">
-                            <li><span class="circle">o</span>Resource management</li>
-                            <li><span class="circle">o</span>Multiple roles</li>
-                        </div>
-                    </ul>
+                    <div>
+                        <ul>
+                            <li><span>o</span>Hours log</li>
+                            <li><span>o</span>Reports</li>
+                        </ul>
+                        <ul>
+                            <li><span>o</span>Resource management</li>
+                            <li><span>o</span>Multiple roles</li>
+                        </ul>
+                    </div>
                 </div>
             </section>
             <section>
@@ -132,12 +132,12 @@
             <section>
                 <h3>Form</h3> 
                 <form class="my-form" autocomplete="on">
-                    <div class="column1">
-                        <div class="form-group">
+                    <div class="column1-form">
+                        <div class="form-name-email">
                             <label for="name">Name:</label>
                             <input id="name" type="text" name="name" placeholder="Name" required>
                         </div>
-                        <div class="form-group">
+                        <div class="form-name-email">
                             <label for="email"> Email:</label>
                             <input id="email" type="email" name="email" placeholder="Email" required>
                         </div>
@@ -157,7 +157,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="column2">
+                    <div class="column2-form">
                         <label>Message:</label>
                         <textarea name="message" cols="40" rows="6" placeholder="Message" required></textarea>
                     
