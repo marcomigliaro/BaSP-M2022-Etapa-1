@@ -54,6 +54,23 @@ This week we created 6 different JavaScript files, where each one of them was fo
   
 - <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Guide" target="_blank">Javascript Guide [MDN]</a>
 
+# Week 6
+There were created 2 more pages (Log in and Sign up). Both of them have the same general styling as the landing page and they have forms which are validated by using JavaScript DOM. Also, the contact form created in the landing page will have the same functionalities.
+
+<a href="https://marcomigliaro.github.io/BaSP-M2022-Etapa-1/Semana-06/index.html" target="_blank">Week 6 Github Pages</a>
+
+## Acknowledgments
+
+- <a href="https://www.youtube.com/watch?v=Wd_IxG7lOP8" target="_blank">JavaScript DOM [Youtube]</a>
+  
+- <a href="https://www.digitalocean.com/community/tutorials/como-modificar-atributos-clases-y-estilos-en-el-dom-es" target="_blank">How to modify the DOM</a>
+
+- <a href="http://juanmirod.github.io/2019/06/24/chuleta-dom.html" target="_blank">DOM manipulation</a>
+
+- <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events" target="_blank">Introduction to Events [MDN]</a>
+
+- <a href="https://medium.com/jspoint/understanding-basics-of-dom-265b73d958d1" target="_blank">Understanding the basics of DOM</a>
+  
 # Contact
 
 Developer: Marco Migliaro
