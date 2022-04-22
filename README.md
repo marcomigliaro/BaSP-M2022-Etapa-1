@@ -57,7 +57,7 @@ This week we created 6 different JavaScript files, where each one of them was fo
 # Week 6
 There were created 2 more pages (Log in and Sign up). Both of them have the same general styling as the landing page and they have forms which are validated by using JavaScript DOM. Also, the contact form created in the landing page will have the same functionalities.
 
-<a href="https://marcomigliaro.github.io/BaSP-M2022-Etapa-1/Semana-06/index.html" target="_blank">Week 6 Github Pages</a>
+<a href="https://marcomigliaro.github.io/BaSP-M2022-Etapa-1/Semana-06/views/index.html" target="_blank">Week 6 Github Pages</a>
 
 ## Acknowledgments
 
