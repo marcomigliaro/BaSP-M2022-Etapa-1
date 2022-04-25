@@ -1,6 +1,7 @@
 main {
     display: flex;
     justify-content: center;
+    /* flex-wrap: wrap; */
     height: 400px;
     margin: 40px 0;
 }
@@ -23,13 +24,21 @@ main {
 }
 
 .log-in-form input[type=email] , .log-in-form input[type=password] {
+    height: 25px;
     background-color: transparent;
     border: hidden;
     border-bottom: 1px solid;
 }
 
-.log-in-form input[type=submit] {
-    padding: 5px 50px;
+.log-in-form p {
+    display: none;
+    padding-top: 2px;
+    font-size: 12px;
+    color: #d72d0f;
+}
+
+.log-in-form button {
+    padding: 5px 60px;
     background-color: #AACE9B;
     border: hidden;
     border-radius: 5px;
@@ -44,4 +53,8 @@ main {
 
 .log-in-form a:hover {
     color: #AACE9B;
+}
+
+.information {
+    display: none;
 }

@@ -66,21 +66,32 @@
             <form class="log-in-form">
                 <h3>Log in</h3>
 
-                <input type="email" name="email" placeholder="Email">
-                <input type="password" name="password" placeholder="Password">
+                <div>
+                    <input id="email" type="email" name="email" placeholder="Email">
+                    <p>Invalid email</p>
+                </div>
+                <div>
+                    <input id="password" type="password" name="password" placeholder="Password">
+                <p>Invalid Password</p>
+                </div>
 
                 <div class="remember-me">
                     <input type="checkbox" name="remember-me" value="remember-me">
                     <label for="remember-me">Remember me</label>
                 </div>
 
-                <input type="submit" value="Continue">
+                <button>Log in</button>
 
                 <div>
                 <label for=""> Don't have an account?</label>
                 <a href="./sign-up.html" title="Sign up">Sign Up</a>
                 </div>
             </form>
+            <div class="information">
+                <h3>Information</h3>
+                <label for="email"> Email: </label>
+                <label for="password"> Password: </label>
+            </div>
         </main>
 
         <footer>
