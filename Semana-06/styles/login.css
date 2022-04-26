@@ -30,7 +30,7 @@ main {
 }
 
 .log-in-form p {
-    display: none;
+    visibility: hidden;
     padding-top: 2px;
     font-size: 12px;
     color: #d72d0f;

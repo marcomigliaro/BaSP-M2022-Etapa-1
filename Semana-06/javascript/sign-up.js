@@ -28,20 +28,20 @@ window.onload = function() {
             emailValidationRes = e.target.value;
             return emailValidationRes;
         } else {
-            error[0].style.display = 'flex';
+            error[0].style.visibility = 'visible';
             emailValidationRes = 'Invalid value';
             return false;
         }
     }
     
     function removeEmail(e){
-        error[0].style.display = 'none';
+        error[0].style.visibility = 'hidden';
     }
 
     function validatePassword(e){
         e.preventDefault();
         if(e.target.value.length < 8){
-            error[1].style.display = 'flex';
+            error[1].style.visibility = 'visible';
             passwordValidationRes = 'Invalid value';
         } else {
             passwordValidationRes = e.target.value;
@@ -49,7 +49,7 @@ window.onload = function() {
     }
 
     function removePassword(e){
-        error[1].style.display = 'none';
+        error[1].style.visibility = 'hidden';
     }
 
     // Button
@@ -63,16 +63,16 @@ window.onload = function() {
 
     // Handling modal
 
-    var modal = document.getElementById("my-modal");
-    var span = document.getElementsByClassName("close")[0];
+    var modal = document.getElementById('my-modal');
+    var span = document.getElementsByClassName('close')[0];
 
     span.onclick = function() {
-    modal.style.display = "none";
+    modal.style.display = 'none';
     }
 
     window.onclick = function(event) {
     if (event.target == modal) {
-        modal.style.display = "none";
+        modal.style.display = 'none';
     }
     }
 }
