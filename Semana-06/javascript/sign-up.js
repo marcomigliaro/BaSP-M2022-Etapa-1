@@ -44,11 +44,11 @@ window.onload = function() {
     inputName.addEventListener('blur', validateName);
     inputName.addEventListener('focus', removeErrorName);
 
-    // inputLastName.addEventListener('blur', validateLastName);
-    // inputLastName.addEventListener('focus', removeErrorLastName);
+    inputLastName.addEventListener('blur', validateLastName);
+    inputLastName.addEventListener('focus', removeErrorLastName);
 
-    // inputDni.addEventListener('blur', validateDni);
-    // inputDni.addEventListener('focus', removeErrorDni);
+    inputDni.addEventListener('blur', validateDni);
+    inputDni.addEventListener('focus', removeErrorDni);
 
     // inputDateOfBirth.addEventListener('blur', validateDateOfBirth);
     // inputDateOfBirth.addEventListener('focus', removeErrorDateOfBirth);
@@ -79,8 +79,13 @@ window.onload = function() {
     // Define the validation functions
 
     function validateName(e) {
-        if(e.target.value>3 && typeof(e.target.value = )){
-            nameValidationRes= e.target.value;
+        if(e.target.value.length >3){
+            if(containsNumber(e.target.value) || isASymbol(e.target.value) ){
+                error[0].style.visibility = 'visible';
+                nameValidationRes = 'Invalid value';
+            } else {
+                nameValidationRes= e.target.value;
+            }
         } else {
             error[0].style.visibility = 'visible';
             nameValidationRes = 'Invalid value';
@@ -91,15 +96,41 @@ window.onload = function() {
         error[0].style.visibility = 'hidden';
     }
 
-    // function validateLastName(e)
-    // function removeErrorLastName(e) {
-    //     error[1].style.visibility = 'hidden';
-    // }
+    function validateLastName(e) {
+        if(e.target.value.length >3){
+            if(containsNumber(e.target.value) || isASymbol(e.target.value) ){
+                error[1].style.visibility = 'visible';
+                lastNameValidationRes = 'Invalid value';
+            } else {
+                lastNameValidationRes= e.target.value;
+            }
+        } else {
+            error[1].style.visibility = 'visible';
+            lastNameValidationRes = 'Invalid value';
+        }
+    }
 
-    // function validateDni(e)
-    // function removeErrorDni(e) {
-    //     error[2].style.visibility = 'hidden';
-    // }
+    function removeErrorLastName(e) {
+        error[1].style.visibility = 'hidden';
+    }
+
+    function validateDni(e) {
+        if(e.target.value.length >7){
+            if(isNaN(e.target.value) || isASymbol(e.target.value) ){
+                error[2].style.visibility = 'visible';
+                dniValidationRes = 'Invalid value';
+            } else {
+                dniValidationRes= e.target.value;
+            }
+        } else {
+            error[2].style.visibility = 'visible';
+            dniValidationRes = 'Invalid value';
+        }
+    }
+
+    function removeErrorDni(e) {
+        error[2].style.visibility = 'hidden';
+    }
 
     // function validateDateOfBirth(e)
     // function removeErrorDateOfBirth(e) {
@@ -157,6 +188,42 @@ window.onload = function() {
     // function removeErrorRepeatPassword(e) {
     //     error[10].style.visibility = 'hidden';
     // }
+
+    //Check if there are digits in the string
+    function containsNumber (string) {
+        string = string.split(" ").join("");
+        var control = 0;
+        for (var i=0; i < string.length; i++) {
+            if (Number(string[i]) == string[i]) {
+                control ++;
+            }
+        }
+        //returns true if the string contains digits
+        if (control == 0) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    //Check if there are special characters in the string
+    function isASymbol (string) {
+        var symbols = '!"#$%&/()=?¡¿|¨*][_:;,.-{}+¬°~^`@'+"'";
+        var control = 0;
+        for (var i=0; i < string.length; i++) {
+            for(var x=0;x < symbols.length;x++) {
+                if (string[i] == symbols[x]) {
+                    control ++;
+                }
+            }
+        }
+        //returns true if the string contains a special character
+        if (control == 0) {
+            return false;
+        } else {
+            return true;
+        }
+    }
 
     // Button
 
