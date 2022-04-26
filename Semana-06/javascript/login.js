@@ -14,10 +14,10 @@ window.onload = function() {
     // Add events to every one of the inputs
     
     inputEmail.addEventListener('blur', validateEmail);
-    inputEmail.addEventListener('focus', removeEmail);
+    inputEmail.addEventListener('focus', removeErrorEmail);
 
     inputPassword.addEventListener('blur', validatePassword);
-    inputPassword.addEventListener('focus', removePassword);
+    inputPassword.addEventListener('focus', removeErrorPassword);
 
     buttonLogIn.addEventListener('click', result);
 
@@ -34,7 +34,7 @@ window.onload = function() {
         }
     }
     
-    function removeEmail(e){
+    function removeErrorEmail(e){
         error[0].style.visibility = 'hidden';
     }
 
@@ -48,7 +48,7 @@ window.onload = function() {
         }
     }
 
-    function removePassword(e){
+    function removeErrorPassword(e){
         error[1].style.visibility = 'hidden';
     }
 
