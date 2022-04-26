@@ -1,17 +1,10 @@
 window.onload = function() {
-    var form = document.querySelector('.log-in-form');
     var inputEmail = document.getElementById('email');
     var inputPassword = document.getElementById('password');
     var error = document.querySelectorAll('.log-in-form p');
     var buttonLogIn = document.querySelector('button');
-    var information = document.querySelector('.information');
-
-    // console.log(form);
-    // console.log(buttonLogIn);
-    // console.log(information);
-    // console.log(email);
-    // console.log(email.value);
-    // console.log(error[0]);
+    var emailValue = document.getElementById('email-value');
+    var passwordValue = document.getElementById('password-value');
 
     // Result of the validations per field
 
@@ -32,17 +25,15 @@ window.onload = function() {
 
     function validateEmail(e) {
         if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(e.target.value)) {
-            // console.log('Email valido');
-            // console.log(e.target.value);
             emailValidationRes = e.target.value;
             return emailValidationRes;
         } else {
             error[0].style.display = 'flex';
-            console.log('Email incorrecto');
+            emailValidationRes = 'Invalid value';
             return false;
         }
     }
-
+    
     function removeEmail(e){
         error[0].style.display = 'none';
     }
@@ -51,10 +42,9 @@ window.onload = function() {
         e.preventDefault();
         if(e.target.value.length < 8){
             error[1].style.display = 'flex';
-            console.log('Password incorrecto');
+            passwordValidationRes = 'Invalid value';
         } else {
             passwordValidationRes = e.target.value;
-            console.log(passwordValidationRes);
         }
     }
 
@@ -66,34 +56,23 @@ window.onload = function() {
 
     function result(e){
         e.preventDefault();
-        console.log('Button clicked');
-        // buttonLogIn.style.color = 'blue';
-        information.style.display = 'block';
-        // var labelEmail = document.createElement('label');
-        // //labelEmail.innerHTML = texto1;
-        // console.log(labelEmail);
-        // console.log(email);
-        console.log(emailValidationRes);
-
-        // button.style.backgroundcolor = 'blue';
-
+        modal.style.display = "block";
+        emailValue.innerHTML = emailValidationRes;
+        passwordValue.innerHTML = passwordValidationRes;
     }
 
-    // password.addEventListener('blur', e => {
-    //     e.preventDefault();
-    //     if(password.value.length <=8) {
-    //         errorPass.style.display ="flex";
-    //     }
-    //     else {
-    //         for(i of password.value) {
-    //             if(!letterNumbers.includes(i)) {
-    //                 errorPass.style.display ="flex";
-    //             }
-    //         }
-    //     }
-    // })
+    // Handling modal
 
+    var modal = document.getElementById("my-modal");
+    var span = document.getElementsByClassName("close")[0];
 
-    console.log(emailValidationRes);
+    span.onclick = function() {
+    modal.style.display = "none";
+    }
 
+    window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+    }
 }
