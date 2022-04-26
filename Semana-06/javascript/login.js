@@ -26,11 +26,9 @@ window.onload = function() {
     function validateEmail(e) {
         if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(e.target.value)) {
             emailValidationRes = e.target.value;
-            return emailValidationRes;
         } else {
             error[0].style.visibility = 'visible';
             emailValidationRes = 'Invalid value';
-            return false;
         }
     }
     
