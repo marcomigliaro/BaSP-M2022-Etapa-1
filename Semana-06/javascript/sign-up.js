@@ -50,8 +50,8 @@ window.onload = function() {
     inputDni.addEventListener('blur', validateDni);
     inputDni.addEventListener('focus', removeErrorDni);
 
-    // inputDateOfBirth.addEventListener('blur', validateDateOfBirth);
-    // inputDateOfBirth.addEventListener('focus', removeErrorDateOfBirth);
+    inputDateOfBirth.addEventListener('blur', validateDateOfBirth);
+    inputDateOfBirth.addEventListener('focus', removeErrorDateOfBirth);
 
     inputPhoneNumber.addEventListener('blur', validatePhoneNumber);
     inputPhoneNumber.addEventListener('focus', removeErrorPhoneNumber);
@@ -132,23 +132,13 @@ window.onload = function() {
         error[2].style.visibility = 'hidden';
     }
 
-    // function validateDateOfBirth(e) {
-    //     if(New Date e.target.value.length > 7){
-    //         if(isNaN(e.target.value) || isASymbol(e.target.value) ){
-    //             error[3].style.visibility = 'visible';
-    //             dniValidationRes = 'Invalid value';
-    //         } else {
-    //             dniValidationRes= e.target.value;
-    //         }
-    //     } else {
-    //         error[3].style.visibility = 'visible';
-    //         dniValidationRes = 'Invalid value';
-    //     }
-    // }
+    function validateDateOfBirth(e) {
+        dateOfBirthValidationRes= e.target.value;
+    }
 
-    // function removeErrorDateOfBirth(e) {
-    //     error[3].style.visibility = 'hidden';
-    // }
+    function removeErrorDateOfBirth(e) {
+        error[3].style.visibility = 'hidden';
+    }
 
     function validatePhoneNumber(e) {
         if(e.target.value.length == 10){
