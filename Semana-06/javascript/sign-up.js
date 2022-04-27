@@ -53,8 +53,8 @@ window.onload = function() {
     // inputDateOfBirth.addEventListener('blur', validateDateOfBirth);
     // inputDateOfBirth.addEventListener('focus', removeErrorDateOfBirth);
 
-    // inputPhoneNumber.addEventListener('blur', validatePhoneNumber);
-    // inputPhoneNumber.addEventListener('focus', removeErrorPhoneNumber);
+    inputPhoneNumber.addEventListener('blur', validatePhoneNumber);
+    inputPhoneNumber.addEventListener('focus', removeErrorPhoneNumber);
 
     // inputAdress.addEventListener('blur', validateAdress);
     // inputAdress.addEventListener('focus', removeErrorAdress);
@@ -62,24 +62,24 @@ window.onload = function() {
     // inputLocation.addEventListener('blur', validateLocation);
     // inputLocation.addEventListener('focus', removeErrorLocation);
 
-    // inputPostalCode.addEventListener('blur', validatePostalCode);
-    // inputPostalCode.addEventListener('focus', removeErrorPostalCode);
+    inputPostalCode.addEventListener('blur', validatePostalCode);
+    inputPostalCode.addEventListener('focus', removeErrorPostalCode);
 
-    // inputEmail.addEventListener('blur', validateEmail);
-    // inputEmail.addEventListener('focus', removeErrorEmail);
+    inputEmail.addEventListener('blur', validateEmail);
+    inputEmail.addEventListener('focus', removeErrorEmail);
 
-    // inputPassword.addEventListener('blur', validatePassword);
-    // inputPassword.addEventListener('focus', removeErrorPassword);
+    inputPassword.addEventListener('blur', validatePassword);
+    inputPassword.addEventListener('focus', removeErrorPassword);
 
-    // inputRepeatPassword.addEventListener('blur', validateRepeatPassword);
-    // inputRepeatPassword.addEventListener('focus', removeErrorRepeatPassword);
+    inputRepeatPassword.addEventListener('blur', validateRepeatPassword);
+    inputRepeatPassword.addEventListener('focus', removeErrorRepeatPassword);
 
     buttonSignUp.addEventListener('click', result);
 
     // Define the validation functions
 
     function validateName(e) {
-        if(e.target.value.length >3){
+        if(e.target.value.length > 3){
             if(containsNumber(e.target.value) || isASymbol(e.target.value) ){
                 error[0].style.visibility = 'visible';
                 nameValidationRes = 'Invalid value';
@@ -97,7 +97,7 @@ window.onload = function() {
     }
 
     function validateLastName(e) {
-        if(e.target.value.length >3){
+        if(e.target.value.length > 3){
             if(containsNumber(e.target.value) || isASymbol(e.target.value) ){
                 error[1].style.visibility = 'visible';
                 lastNameValidationRes = 'Invalid value';
@@ -115,7 +115,7 @@ window.onload = function() {
     }
 
     function validateDni(e) {
-        if(e.target.value.length >7){
+        if(e.target.value.length > 7){
             if(isNaN(e.target.value) || isASymbol(e.target.value) ){
                 error[2].style.visibility = 'visible';
                 dniValidationRes = 'Invalid value';
@@ -137,57 +137,118 @@ window.onload = function() {
     //     error[3].style.visibility = 'hidden';
     // }
 
-    // function validatePhoneNumber(e)
-    // function removeErrorPhoneNumber(e) {
-    //     error[4].style.visibility = 'hidden';
-    // }
+    function validatePhoneNumber(e) {
+        if(e.target.value.length == 10){
+            if(isNaN(e.target.value) || isASymbol(e.target.value) ){
+                error[4].style.visibility = 'visible';
+                phoneNumberValidationRes = 'Invalid value';
+            } else {
+                phoneNumberValidationRes= e.target.value;
+            }
+        } else {
+            error[4].style.visibility = 'visible';
+            phoneNumberValidationRes = 'Invalid value';
+        }
+    }
+
+    function removeErrorPhoneNumber(e) {
+        error[4].style.visibility = 'hidden';
+    }
 
     // function validateAdress(e)
     // function removeErrorAdress(e) {
     //     error[5].style.visibility = 'hidden';
     // }
 
-    // function validateLocation
-    // function removeErrorLocation {
+    // function validateLocation(e) {
+    //     if(quantityLetters(e.target.value) > 3){
+    //         if(isASymbol(e.target.value) ){
+    //             error[6].style.visibility = 'visible';
+    //             locationValidationRes = 'Invalid value';
+    //         } else {
+    //             locationValidationRes= e.target.value;
+    //         }
+    //     } else {
+    //         error[6].style.visibility = 'visible';
+    //         locationValidationRes = 'Invalid value';
+    //     }
+    // }
+
+    // function removeErrorLocation(e) {
     //     error[6].style.visibility = 'hidden';
     // }
 
-    // function validatePostalCode(e)
-    // function removeErrorPostalCode(e) {
-    //     error[7].style.visibility = 'hidden';
-    // }
+    function validatePostalCode(e) {
+        if(e.target.value.length >= 4 && e.target.value.length <= 5 ){
+            if(isNaN(e.target.value) || isASymbol(e.target.value) ){
+                error[7].style.visibility = 'visible';
+                postalCodeValidationRes = 'Invalid value';
+            } else {
+                postalCodeValidationRes= e.target.value;
+            }
+        } else {
+            error[7].style.visibility = 'visible';
+            postalCodeValidationRes = 'Invalid value';
+        }
+    }
 
-    // function validateEmail(e) {
-    //     if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(e.target.value)) {
-    //         emailValidationRes = e.target.value;
-    //     } else {
-    //         error[8].style.visibility = 'visible';
-    //         emailValidationRes = 'Invalid value';
-    //     }
-    // }
+    function removeErrorPostalCode(e) {
+        error[7].style.visibility = 'hidden';
+    }
+
+    function validateEmail(e) {
+        if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(e.target.value)) {
+            emailValidationRes = e.target.value;
+        } else {
+            error[8].style.visibility = 'visible';
+            emailValidationRes = 'Invalid value';
+        }
+    }
     
-    // function removeErrorEmail(e){
-    //     error[8].style.visibility = 'hidden';
-    // }
+    function removeErrorEmail(e){
+        error[8].style.visibility = 'hidden';
+    }
 
-    // function validatePassword(e){
-    //     e.preventDefault();
-    //     if(e.target.value.length < 8){
-    //         error[9].style.visibility = 'visible';
-    //         passwordValidationRes = 'Invalid value';
-    //     } else {
-    //         passwordValidationRes = e.target.value;
-    //     }
-    // }
+    function validatePassword(e){
+        if(e.target.value.length >= 8){
+            if(!isNaN(e.target.value) || !containsNumber(e.target.value) || isASymbol(e.target.value) ){
+                error[9].style.visibility = 'visible';
+                passwordValidationRes = 'Invalid value';
+            } else {
+                passwordValidationRes = e.target.value;
+            }
+        } else {
+            error[9].style.visibility = 'visible';
+            passwordValidationRes = 'Invalid value';
+        }
+    }
 
-    // function removeErrorPassword(e) {
-    //     error[9].style.visibility = 'hidden';
-    // }
+    function removeErrorPassword(e) {
+        error[9].style.visibility = 'hidden';
+    }
 
-    // function validateRepeatPassword(e)
-    // function removeErrorRepeatPassword(e) {
-    //     error[10].style.visibility = 'hidden';
-    // }
+    function validateRepeatPassword(e){
+        if(e.target.value.length >= 8){
+            if(!isNaN(e.target.value) || !containsNumber(e.target.value) || isASymbol(e.target.value) ){
+                    error[10].style.visibility = 'visible';
+                    repeatPasswordValidationRes = 'Invalid value';
+            } else {
+                if(e.target.value == passwordValidationRes){
+                    repeatPasswordValidationRes = e.target.value;
+                } else {
+                    error[10].style.visibility = 'visible';
+                    repeatPasswordValidationRes = 'Invalid value';
+                }
+            }
+        } else {
+                error[10].style.visibility = 'visible';
+                repeatPasswordValidationRes = 'Invalid value';
+        }
+    }
+
+    function removeErrorRepeatPassword(e) {
+        error[10].style.visibility = 'hidden';
+    }
 
     //Check if there are digits in the string
     function containsNumber (string) {
@@ -224,6 +285,30 @@ window.onload = function() {
             return true;
         }
     }
+
+    //Count the number of letter
+    function quantityLetters (string) {
+        var letters = 'abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ';
+        var control = 0;
+        for (var i=0; i < string.length; i++) {
+            for(var x=0;x < letters.length;x++) {
+                if (string[i] == letters[x]) {
+                    control ++;
+                }
+            }
+        }
+        //returns the quantity of letters
+        if (control == 0) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    console.log('asd');
+    console.log(isASymbol ('hola'))
+
+    // console.log(quantityLetters('aabcd');
 
     // Button
 

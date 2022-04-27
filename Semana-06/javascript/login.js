@@ -37,17 +37,57 @@ window.onload = function() {
     }
 
     function validatePassword(e){
-        e.preventDefault();
-        if(e.target.value.length < 8){
+        if(e.target.value.length >= 8){
+            if(!isNaN(e.target.value) || !containsNumber(e.target.value) || isASymbol(e.target.value) ){
+                error[1].style.visibility = 'visible';
+                passwordValidationRes = 'Invalid value';
+            } else {
+                passwordValidationRes= e.target.value;
+            }
+        } else {
             error[1].style.visibility = 'visible';
             passwordValidationRes = 'Invalid value';
-        } else {
-            passwordValidationRes = e.target.value;
         }
     }
 
     function removeErrorPassword(e){
         error[1].style.visibility = 'hidden';
+    }
+
+    //Check if there are digits in the string
+    function containsNumber (string) {
+        string = string.split(" ").join("");
+        var control = 0;
+        for (var i=0; i < string.length; i++) {
+            if (Number(string[i]) == string[i]) {
+                control ++;
+            }
+        }
+        //returns true if the string contains digits
+        if (control == 0) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    //Check if there are special characters in the string
+    function isASymbol (string) {
+        var symbols = '!"#$%&/()=?¡¿|¨*][_:;,.-{}+¬°~^`@'+"'";
+        var control = 0;
+        for (var i=0; i < string.length; i++) {
+            for(var x=0;x < symbols.length;x++) {
+                if (string[i] == symbols[x]) {
+                    control ++;
+                }
+            }
+        }
+        //returns true if the string contains a special character
+        if (control == 0) {
+            return false;
+        } else {
+            return true;
+        }
     }
 
     // Button
