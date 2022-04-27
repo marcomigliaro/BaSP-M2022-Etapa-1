@@ -56,11 +56,11 @@ window.onload = function() {
     inputPhoneNumber.addEventListener('blur', validatePhoneNumber);
     inputPhoneNumber.addEventListener('focus', removeErrorPhoneNumber);
 
-    // inputAdress.addEventListener('blur', validateAdress);
-    // inputAdress.addEventListener('focus', removeErrorAdress);
+    inputAdress.addEventListener('blur', validateAdress);
+    inputAdress.addEventListener('focus', removeErrorAdress);
 
-    // inputLocation.addEventListener('blur', validateLocation);
-    // inputLocation.addEventListener('focus', removeErrorLocation);
+    inputLocation.addEventListener('blur', validateLocation);
+    inputLocation.addEventListener('focus', removeErrorLocation);
 
     inputPostalCode.addEventListener('blur', validatePostalCode);
     inputPostalCode.addEventListener('focus', removeErrorPostalCode);
@@ -132,7 +132,20 @@ window.onload = function() {
         error[2].style.visibility = 'hidden';
     }
 
-    // function validateDateOfBirth(e)
+    // function validateDateOfBirth(e) {
+    //     if(New Date e.target.value.length > 7){
+    //         if(isNaN(e.target.value) || isASymbol(e.target.value) ){
+    //             error[3].style.visibility = 'visible';
+    //             dniValidationRes = 'Invalid value';
+    //         } else {
+    //             dniValidationRes= e.target.value;
+    //         }
+    //     } else {
+    //         error[3].style.visibility = 'visible';
+    //         dniValidationRes = 'Invalid value';
+    //     }
+    // }
+
     // function removeErrorDateOfBirth(e) {
     //     error[3].style.visibility = 'hidden';
     // }
@@ -155,28 +168,41 @@ window.onload = function() {
         error[4].style.visibility = 'hidden';
     }
 
-    // function validateAdress(e)
-    // function removeErrorAdress(e) {
-    //     error[5].style.visibility = 'hidden';
-    // }
+    function validateAdress(e) {
+        if(e.target.value.length >= 5 && hasASpace(e.target.value)){
+            if(!isNaN(e.target.value) || !containsNumber(e.target.value) || isASymbol(e.target.value) ){
+                error[5].style.visibility = 'visible';
+                adressValidationRes = 'Invalid value';
+            } else {
+                adressValidationRes = e.target.value;
+            }
+        } else {
+            error[5].style.visibility = 'visible';
+            adressValidationRes = 'Invalid value';
+        }
+    }
 
-    // function validateLocation(e) {
-    //     if(quantityLetters(e.target.value) > 3){
-    //         if(isASymbol(e.target.value) ){
-    //             error[6].style.visibility = 'visible';
-    //             locationValidationRes = 'Invalid value';
-    //         } else {
-    //             locationValidationRes= e.target.value;
-    //         }
-    //     } else {
-    //         error[6].style.visibility = 'visible';
-    //         locationValidationRes = 'Invalid value';
-    //     }
-    // }
+    function removeErrorAdress(e) {
+        error[5].style.visibility = 'hidden';
+    }
 
-    // function removeErrorLocation(e) {
-    //     error[6].style.visibility = 'hidden';
-    // }
+    function validateLocation(e) {
+        if(quantityLetters(e.target.value)){
+            if(isASymbol(e.target.value) || !containsNumber(e.target.value) ){
+                error[6].style.visibility = 'visible';
+                locationValidationRes = 'Invalid value';
+            } else {
+                locationValidationRes= e.target.value;
+            }
+        } else {
+            error[6].style.visibility = 'visible';
+            locationValidationRes = 'Invalid value';
+        }
+    }
+
+    function removeErrorLocation(e) {
+        error[6].style.visibility = 'hidden';
+    }
 
     function validatePostalCode(e) {
         if(e.target.value.length >= 4 && e.target.value.length <= 5 ){
@@ -291,24 +317,25 @@ window.onload = function() {
         var letters = 'abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ';
         var control = 0;
         for (var i=0; i < string.length; i++) {
-            for(var x=0;x < letters.length;x++) {
-                if (string[i] == letters[x]) {
-                    control ++;
-                }
+            if(letters.includes(string[i])){
+                control ++;
             }
         }
-        //returns the quantity of letters
-        if (control == 0) {
-            return false;
-        } else {
-            return true;
-        }
+        return (control > 3); 
     }
 
-    console.log('asd');
-    console.log(isASymbol ('hola'))
-
-    // console.log(quantityLetters('aabcd');
+    //Checks if there is a space
+    function hasASpace (string) {
+        if (string.indexOf(' ') == string.lastIndexOf(' ')) {
+            if ((string.indexOf(' ') > 0) && (string.indexOf(' ') < (string.length - 1))) {
+                return true;
+            } else {
+                return false;
+            }
+        } else {
+            return false;
+        }
+    }
 
     // Button
 
