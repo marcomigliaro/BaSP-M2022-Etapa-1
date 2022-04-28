@@ -23,7 +23,6 @@ With the HTML file done, the style was added with CSS with the objetive of makin
 
 - <a href="https://www.ciudadano2cero.com/aprender-css-basico-desde-cero/" target="_blank">The quick guide to learn basic CSS from scratch [ciudadano2cero.com]</a>
 
-
 # Week 4
 Flexbox and Media Queries were used to improve the styling done at week 3. The result was a better view of the landing page and the adition of a responsive design (mobile, tablet and desktop versions).
 
@@ -70,6 +69,19 @@ There were created 2 more pages (Log in and Sign up). Both of them have the same
 - <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events" target="_blank">Introduction to Events [MDN]</a>
 
 - <a href="https://medium.com/jspoint/understanding-basics-of-dom-265b73d958d1" target="_blank">Understanding the basics of DOM</a>
+
+# Week 7
+This week we extended the form functionalities by sending the upload information to a Web Server. In addition, this informaton will be saved in the LocalStorage to be used in the forms when loading each page.
+
+<a href="https://marcomigliaro.github.io/BaSP-M2022-Etapa-1/Semana-07/views/" target="_blank">Week 7 Github Pages</a>
+
+## Acknowledgments
+
+- <a href="https://www.youtube.com/watch?v=sgyNnQIgmLI" target="_blank">¿What is BACKEND and FRONTEND? (Complete Guide) [Youtube]</a>
+
+- <a href="https://drive.google.com/file/d/16b6l3aN9gZIyoDMJUZXsDLJQ1oQ5TdOH/view" target="_blank">Async in JavaScript [Radium Rocket]</a>
+
+- <a href="https://drive.google.com/file/d/154ttP74Ep5ufj2zF89PoYLHTz_n11jHk/view" target="_blank">Introduction to async in Javascript [Radium Rocket]</a>
   
 # Contact
 
@@ -82,3 +94,13 @@ Linkedin: <a href="https://www.linkedin.com/in/marco-migliaro-7603a4204/" target
 Project Link: <a href="https://github.com/marcomigliaro/BaSP-M2022-Etapa-1" target="_blank">https://github.com/marcomigliaro/BaSP-M2022-Etapa-1</a>
 
 <p align="right">(<a href="#top">Back to top</a>)</p>
+
+<!-- Weekly template
+# Week ..
+This week...
+
+<a href="..l" target="_blank">Week .. Github Pages</a>
+
+## Acknowledgments
+
+- <a href="" target="_blank"></a> -->
