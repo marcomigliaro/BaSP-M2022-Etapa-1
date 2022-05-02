@@ -77,7 +77,7 @@ This week we extended the form functionalities by sending the upload information
 
 ## Acknowledgments
 
-- <a href="https://www.youtube.com/watch?v=sgyNnQIgmLI" target="_blank">¿What is BACKEND and FRONTEND? (Complete Guide) [Youtube]</a>
+- <a href="https://www.youtube.com/watch?v=sgyNnQIgmLI" target="_blank">What is BACKEND and FRONTEND? (Complete Guide) [Youtube]</a>
 
 - <a href="https://drive.google.com/file/d/16b6l3aN9gZIyoDMJUZXsDLJQ1oQ5TdOH/view" target="_blank">Async in JavaScript [Radium Rocket]</a>
 
