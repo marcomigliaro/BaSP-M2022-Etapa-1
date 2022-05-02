@@ -77,6 +77,12 @@ main {
     width: 60%;
     line-height : 25px;
 }
+
+.modal-content h4{
+    padding-bottom: 5px;
+    font-size: 16px;
+    color: #AACE9B;
+}
   
 .close {
     float: right;

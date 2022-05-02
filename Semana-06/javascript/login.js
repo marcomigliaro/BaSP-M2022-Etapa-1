@@ -94,44 +94,9 @@ window.onload = function() {
 
     function result(e){
         e.preventDefault();
-        // modal.style.display = "block";
+        modal.style.display = "block";
         emailValue.innerHTML = emailValidationRes;
         passwordValue.innerHTML = passwordValidationRes;
-
-        var control = 0;
-
-        for (var i=0; i <= 1; i++){
-            if (error[i].style.visibility == 'visible'){
-                control ++;
-            }
-        }
-
-        if (control == 0){
-
-            fetch('https://basp-m2022-api-rest-server.herokuapp.com/login?email=' + inputEmail.value 
-            + '&password=' + inputPassword.value)
-            .then(function (response) {
-                return response.json();
-            })
-            .then(function (jsonResponse) {
-                console.log("json", jsonResponse);
-                if (jsonResponse.success) {
-                console.log("Good", jsonResponse);
-                // LÓGICA CUANDO LA REQUEST ES EXITOSA Y MOSTRAR UN ALERT
-                alert('Employee logged in successfully');
-                modal.style.display = "block";
-                } else {
-                throw jsonResponse;
-                }
-            })
-            .catch(function (error) {
-                console.warn('Error', error);
-            // LÓGICA CUANDO LA REQUEST SALE MAL
-                alert('Incorrect email or password');
-            })
-        } else {
-            alert('Incorrect email or password');
-        }
     }
 
     // Handling modal
