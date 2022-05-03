@@ -10,7 +10,7 @@ main {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    flex-basis: 300px;
+    flex-basis: 400px;
     background-color: #DCDADA;
     border-radius: 15px;
     box-shadow: 0px 8px 16px rgba(50, 50, 71, 0.06);
