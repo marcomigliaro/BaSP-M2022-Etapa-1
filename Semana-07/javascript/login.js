@@ -119,6 +119,7 @@ window.onload = function() {
                 console.log("Good", jsonResponse);
                 // LÓGICA CUANDO LA REQUEST ES EXITOSA Y MOSTRAR UN ALERT
                 modal.style.display = "block";
+                modalSign.style.color = '#AACE9B';
                 modalSign.innerHTML = 'Employee logged in successfully';
                 } else {
                 throw jsonResponse;

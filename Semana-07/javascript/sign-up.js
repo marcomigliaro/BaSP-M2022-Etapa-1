@@ -12,6 +12,7 @@ window.onload = function() {
     var inputRepeatPassword = document.getElementById('repeat-password');
     var error = document.querySelectorAll('.sign-up-form p');
     var buttonSignUp = document.querySelector('button');
+    var modalSign = document.querySelector('.modal-content h4');
 
     var nameValue = document.getElementById('name-value');
     var lastNameValue = document.getElementById('last-name-value');
@@ -327,11 +328,25 @@ window.onload = function() {
         }
     }
 
+    // Upload data from LocalStorage to form
+    inputName.value = localStorage.getItem('name');
+    inputLastName.value = localStorage.getItem('lastName');
+    inputDni.value = localStorage.getItem('dni');
+    // inputDateOfBirth.value = localStorage.getItem('dob');
+    inputDateOfBirth.value = '04/04/1990';
+    inputPhoneNumber.value = localStorage.getItem('phone');
+    inputAdress.value = localStorage.getItem('address');
+    inputLocation.value = localStorage.getItem('city');
+    inputPostalCode.value = localStorage.getItem('zip');
+    inputEmail.value = localStorage.getItem('email');
+    inputPassword.value = localStorage.getItem('password');
+    inputRepeatPassword.value = localStorage.getItem('password2');
+
     // Button
 
     function result(e){
         e.preventDefault();
-        modal.style.display = "block";
+        // modal.style.display = "block";
         nameValue.innerHTML = nameValidationRes;
         lastNameValue.innerHTML = lastNameValidationRes;
         dniValue.innerHTML = dniValidationRes;
@@ -343,6 +358,80 @@ window.onload = function() {
         emailValue.innerHTML = emailValidationRes;
         passwordValue.innerHTML = passwordValidationRes;
         repeatPasswordValue.innerHTML = repeatPasswordValidationRes;
+
+        // TEST
+        /*
+        inputName.value = 'Jorge';
+        inputLastName.value = 'Alvarez';
+        inputDni.value = '16738476';
+        // inputDateOfBirth.value = '1990/04/04';
+        inputPhoneNumber.value = '3415847236'; 
+        inputAdress.value = 'Oroño 1500';
+        inputLocation.value = 'Rosario';
+        inputPostalCode.value = '2000';
+        inputEmail.value = 'jorge@gmail.com';
+        inputPassword.value = 'dinamite123';
+        inputRepeatPassword.value = 'dinamite123';*/
+
+        var control = 0;
+
+        for (var i=0; i <= 10; i++){
+            if (error[i].style.visibility == 'visible'){
+                control ++;
+            }
+        }
+
+        console.log(control);
+
+        if (control == 0){
+            //FETCH
+            fetch('https://basp-m2022-api-rest-server.herokuapp.com/signup?name=' + inputName.value 
+            + '&lastName=' + inputLastName.value + '&dni=' + inputDni.value + '&dob=' + '04/04/1990' 
+            + '&phone=' + inputPhoneNumber.value + '&address=' + inputAdress.value + '&city=' + 
+            inputLocation.value + '&zip=' + inputPostalCode.value + '&email=' + inputEmail.value + 
+            '&password=' + inputPassword.value + '&password=' + inputRepeatPassword.value)
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (jsonResponse) {
+                console.log("json", jsonResponse);
+                if (jsonResponse.success) {
+                console.log("Good", jsonResponse);
+                // LÓGICA CUANDO LA REQUEST ES EXITOSA Y MOSTRAR UN ALERT
+
+                localStorage.setItem('name', jsonResponse.data.name);
+                localStorage.setItem('lastName', jsonResponse.data.lastName);
+                localStorage.setItem('dni', jsonResponse.data.dni);
+                localStorage.setItem('dob', jsonResponse.data.dob);
+                localStorage.setItem('phone', jsonResponse.data.phone);
+                localStorage.setItem('address', jsonResponse.data.address);
+                localStorage.setItem('city', jsonResponse.data.city);
+                localStorage.setItem('zip', jsonResponse.data.zip);
+                localStorage.setItem('email', jsonResponse.data.email);
+                localStorage.setItem('password', jsonResponse.data.password[0]);
+                localStorage.setItem('password2', jsonResponse.data.password[1]);
+
+                //Object.entries()
+
+                modal.style.display = "block";
+                modalSign.style.color = '#AACE9B';
+                modalSign.innerHTML = 'SUCCESS';
+                } else {
+                throw jsonResponse;
+                }
+            })
+            .catch(function (error) {
+                console.warn('Error', error);
+            // LÓGICA CUANDO LA REQUEST SALE MAL
+                modal.style.display = "block";
+                modalSign.style.color = '#d72d0f';
+                modalSign.innerHTML = 'ERROR API';
+            })
+        } else {
+            modal.style.display = "block";
+            modalSign.style.color = '#d72d0f';
+            modalSign.innerHTML = 'ERROR UI';
+        }
     }
 
     // Handling modal
