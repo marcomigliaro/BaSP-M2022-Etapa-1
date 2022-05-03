@@ -58,7 +58,7 @@ aside a:hover {
     border-bottom: 1px solid #AACE9B;
 }
 
-.menu a , .mail-adress a {
+.menu a , .mail-address a {
     text-decoration: none;
     color: black;
 }
@@ -72,7 +72,7 @@ aside a:hover {
     color: #958888;
 }
 
-.mail-adress {
+.mail-address {
     display: flex;
     justify-content: space-around;
     align-items: center;

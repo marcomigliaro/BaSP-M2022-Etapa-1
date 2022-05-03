@@ -4,7 +4,7 @@ window.onload = function() {
     var inputDni = document.getElementById('dni');
     var inputDateOfBirth = document.getElementById('date-of-birth');
     var inputPhoneNumber = document.getElementById('phone-number');
-    var inputAdress = document.getElementById('adress');
+    var inputAddress = document.getElementById('address');
     var inputLocation = document.getElementById('location');
     var inputPostalCode = document.getElementById('postal-code');
     var inputEmail = document.getElementById('email');
@@ -19,7 +19,7 @@ window.onload = function() {
     var dniValue = document.getElementById('dni-value');
     var dateOfBirthValue = document.getElementById('date-of-birth-value');
     var phoneNumberValue = document.getElementById('phone-number-value');
-    var adressValue = document.getElementById('adress-value');
+    var addressValue = document.getElementById('address-value');
     var locationValue = document.getElementById('location-value');
     var postalCodeValue = document.getElementById('postal-code-value');
     var emailValue = document.getElementById('email-value');
@@ -33,7 +33,7 @@ window.onload = function() {
     var dniValidationRes;
     var dateOfBirthValidationRes;
     var phoneNumberValidationRes;
-    var adressValidationRes;
+    var addressValidationRes;
     var locationValidationRes;
     var postalCodeValidationRes;
     var emailValidationRes;
@@ -57,8 +57,8 @@ window.onload = function() {
     inputPhoneNumber.addEventListener('blur', validatePhoneNumber);
     inputPhoneNumber.addEventListener('focus', removeErrorPhoneNumber);
 
-    inputAdress.addEventListener('blur', validateAdress);
-    inputAdress.addEventListener('focus', removeErrorAdress);
+    inputAddress.addEventListener('blur', validateAddress);
+    inputAddress.addEventListener('focus', removeErrorAddress);
 
     inputLocation.addEventListener('blur', validateLocation);
     inputLocation.addEventListener('focus', removeErrorLocation);
@@ -159,21 +159,21 @@ window.onload = function() {
         error[4].style.visibility = 'hidden';
     }
 
-    function validateAdress(e) {
+    function validateAddress(e) {
         if(e.target.value.length >= 5 && hasASpace(e.target.value)){
             if(!isNaN(e.target.value) || !containsNumber(e.target.value) || isASymbol(e.target.value) ){
                 error[5].style.visibility = 'visible';
-                adressValidationRes = 'Invalid value';
+                addressValidationRes = 'Invalid value';
             } else {
-                adressValidationRes = e.target.value;
+                addressValidationRes = e.target.value;
             }
         } else {
             error[5].style.visibility = 'visible';
-            adressValidationRes = 'Invalid value';
+            addressValidationRes = 'Invalid value';
         }
     }
 
-    function removeErrorAdress(e) {
+    function removeErrorAddress(e) {
         error[5].style.visibility = 'hidden';
     }
 
@@ -335,7 +335,7 @@ window.onload = function() {
     // inputDateOfBirth.value = localStorage.getItem('dob');
     inputDateOfBirth.value = '04/04/1990';
     inputPhoneNumber.value = localStorage.getItem('phone');
-    inputAdress.value = localStorage.getItem('address');
+    inputAddress.value = localStorage.getItem('address');
     inputLocation.value = localStorage.getItem('city');
     inputPostalCode.value = localStorage.getItem('zip');
     inputEmail.value = localStorage.getItem('email');
@@ -352,7 +352,7 @@ window.onload = function() {
         dniValue.innerHTML = dniValidationRes;
         dateOfBirthValue.innerHTML = dateOfBirthValidationRes;
         phoneNumberValue.innerHTML = phoneNumberValidationRes;
-        adressValue.innerHTML = adressValidationRes;
+        addressValue.innerHTML = addressValidationRes;
         locationValue.innerHTML = locationValidationRes;
         postalCodeValue.innerHTML = postalCodeValidationRes;
         emailValue.innerHTML = emailValidationRes;
@@ -366,7 +366,7 @@ window.onload = function() {
         inputDni.value = '16738476';
         // inputDateOfBirth.value = '1990/04/04';
         inputPhoneNumber.value = '3415847236'; 
-        inputAdress.value = 'Oroño 1500';
+        inputAddress.value = 'Oroño 1500';
         inputLocation.value = 'Rosario';
         inputPostalCode.value = '2000';
         inputEmail.value = 'jorge@gmail.com';
@@ -387,7 +387,7 @@ window.onload = function() {
             //FETCH
             fetch('https://basp-m2022-api-rest-server.herokuapp.com/signup?name=' + inputName.value 
             + '&lastName=' + inputLastName.value + '&dni=' + inputDni.value + '&dob=' + '04/04/1990' 
-            + '&phone=' + inputPhoneNumber.value + '&address=' + inputAdress.value + '&city=' + 
+            + '&phone=' + inputPhoneNumber.value + '&address=' + inputAddress.value + '&city=' + 
             inputLocation.value + '&zip=' + inputPostalCode.value + '&email=' + inputEmail.value + 
             '&password=' + inputPassword.value + '&password=' + inputRepeatPassword.value)
             .then(function (response) {
