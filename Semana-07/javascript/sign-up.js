@@ -10,6 +10,7 @@ window.onload = function() {
     var inputEmail = document.getElementById('email');
     var inputPassword = document.getElementById('password');
     var inputRepeatPassword = document.getElementById('repeat-password');
+
     var error = document.querySelectorAll('.sign-up-form p');
     var buttonSignUp = document.querySelector('button');
     var modalSign = document.querySelector('.modal-content h4');
@@ -328,24 +329,41 @@ window.onload = function() {
         }
     }
 
+    // Transforms from date input field (YYYY-MM-DD) to MM/DD/YYYY
+    function transformDateRequest(date) {
+        var dateTransformed = date.substring(5, 7) + '/' + date.substring(8, date.length) + '/' + date.substring(0, 4);
+        return dateTransformed;
+    }
+
+    // Transforms from MM/DD/YYYY to YYYY-MM-DD
+    function transformDateForm(date) {
+        var dateTransformed = date.substring(6, date.length) + '-' + date.substring(0, 2) + '-' + date.substring(3, 5);
+        return dateTransformed;
+    }
+
     // Upload data from LocalStorage to form
-    inputName.value = localStorage.getItem('name');
-    inputLastName.value = localStorage.getItem('lastName');
-    inputDni.value = localStorage.getItem('dni');
-    // inputDateOfBirth.value = localStorage.getItem('dob');
-    inputDateOfBirth.value = '04/04/1990';
-    inputPhoneNumber.value = localStorage.getItem('phone');
-    inputAddress.value = localStorage.getItem('address');
-    inputLocation.value = localStorage.getItem('city');
-    inputPostalCode.value = localStorage.getItem('zip');
-    inputEmail.value = localStorage.getItem('email');
-    inputPassword.value = localStorage.getItem('password');
-    inputRepeatPassword.value = localStorage.getItem('password2');
+
+    var dateTransformedForForm = transformDateForm(localStorage.getItem('dob'));
+
+    inputName.value = localStorage.getItem('name') ? localStorage.getItem('name') : '';
+    inputLastName.value = localStorage.getItem('lastName') ? localStorage.getItem('lastName') : '';
+    inputDni.value = localStorage.getItem('dni') ? localStorage.getItem('dni') : '';
+    inputDateOfBirth.value = localStorage.getItem('dob') ? dateTransformedForForm : '';
+    inputPhoneNumber.value = localStorage.getItem('phone') ? localStorage.getItem('phone') : '';
+    inputAddress.value = localStorage.getItem('address') ? localStorage.getItem('address') : '';
+    inputLocation.value = localStorage.getItem('city') ? localStorage.getItem('city') : '';
+    inputPostalCode.value = localStorage.getItem('zip') ? localStorage.getItem('zip') : '';
+    inputEmail.value = localStorage.getItem('email') ? localStorage.getItem('email') : '';
+    inputPassword.value = localStorage.getItem('password') ? localStorage.getItem('password') : '';
+    inputRepeatPassword.value = localStorage.getItem('password2') ? localStorage.getItem('password2') : '';
 
     // Button
 
+    
     function result(e){
+        
         e.preventDefault();
+        
         // modal.style.display = "block";
         nameValue.innerHTML = nameValidationRes;
         lastNameValue.innerHTML = lastNameValidationRes;
@@ -360,18 +378,22 @@ window.onload = function() {
         repeatPasswordValue.innerHTML = repeatPasswordValidationRes;
 
         // TEST
-        /*
-        inputName.value = 'Jorge';
-        inputLastName.value = 'Alvarez';
-        inputDni.value = '16738476';
-        // inputDateOfBirth.value = '1990/04/04';
-        inputPhoneNumber.value = '3415847236'; 
-        inputAddress.value = 'Oroño 1500';
-        inputLocation.value = 'Rosario';
-        inputPostalCode.value = '2000';
-        inputEmail.value = 'jorge@gmail.com';
-        inputPassword.value = 'dinamite123';
-        inputRepeatPassword.value = 'dinamite123';*/
+        
+        // inputName.value = 'Jorge';
+        // inputLastName.value = 'Alvarez';
+        // inputDni.value = '16738476';
+        // // inputDateOfBirth.value = '1990/04/04';
+        // inputPhoneNumber.value = '3415847236'; 
+        // inputAddress.value = 'Oroño 1500';
+        // inputLocation.value = 'Rosario';
+        // inputPostalCode.value = '2000';
+        // inputEmail.value = 'jorge@gmail.com';
+        // inputPassword.value = 'dinamite123';
+        // inputRepeatPassword.value = 'dinamite123';
+
+        // Transform DATE
+
+        var dateTransformedForApi = transformDateRequest(inputDateOfBirth.value);
 
         var control = 0;
 
@@ -386,10 +408,11 @@ window.onload = function() {
         if (control == 0){
             //FETCH
             fetch('https://basp-m2022-api-rest-server.herokuapp.com/signup?name=' + inputName.value 
-            + '&lastName=' + inputLastName.value + '&dni=' + inputDni.value + '&dob=' + '04/04/1990' 
-            + '&phone=' + inputPhoneNumber.value + '&address=' + inputAddress.value + '&city=' + 
-            inputLocation.value + '&zip=' + inputPostalCode.value + '&email=' + inputEmail.value + 
-            '&password=' + inputPassword.value + '&password=' + inputRepeatPassword.value)
+            + '&lastName=' + inputLastName.value + '&dni=' + inputDni.value + '&dob=' + 
+            dateTransformedForApi + '&phone=' + inputPhoneNumber.value + 
+            '&address=' + inputAddress.value + '&city=' + inputLocation.value + '&zip=' + 
+            inputPostalCode.value + '&email=' + inputEmail.value + '&password=' + 
+            inputPassword.value + '&password=' + inputRepeatPassword.value)
             .then(function (response) {
                 return response.json();
             })
