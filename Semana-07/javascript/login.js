@@ -77,12 +77,11 @@ window.onload = function() {
         var symbols = '!"#$%&/()=?¡¿|¨*][_:;,.-{}+¬°~^`@'+"'";
         var control = 0;
         for (var i=0; i < string.length; i++) {
-            for(var x=0;x < symbols.length;x++) {
-                if (string[i] == symbols[x]) {
-                    control ++;
-                }
+            if (symbols.includes(string[i])){
+                control ++;
             }
         }
+    
         //returns true if the string contains a special character
         if (control == 0) {
             return false;
@@ -107,7 +106,6 @@ window.onload = function() {
         }
 
         if (control == 0){
-
             fetch('https://basp-m2022-api-rest-server.herokuapp.com/login?email=' + inputEmail.value 
             + '&password=' + inputPassword.value)
             .then(function (response) {
@@ -116,18 +114,16 @@ window.onload = function() {
             .then(function (jsonResponse) {
                 console.log("json", jsonResponse);
                 if (jsonResponse.success) {
-                console.log("Good", jsonResponse);
-                // LÓGICA CUANDO LA REQUEST ES EXITOSA Y MOSTRAR UN ALERT
-                modal.style.display = "block";
-                modalSign.style.color = '#AACE9B';
-                modalSign.innerHTML = 'Employee logged in successfully';
+                    console.log("Good", jsonResponse);
+                    modal.style.display = "block";
+                    modalSign.style.color = '#AACE9B';
+                    modalSign.innerHTML = 'Employee logged in successfully';
                 } else {
-                throw jsonResponse;
+                    throw jsonResponse;
                 }
             })
             .catch(function (error) {
                 console.warn('Error', error);
-            // LÓGICA CUANDO LA REQUEST SALE MAL
                 modal.style.display = "block";
                 modalSign.style.color = '#d72d0f';
                 modalSign.innerHTML = 'Incorrect email or password';
@@ -145,12 +141,12 @@ window.onload = function() {
     var span = document.getElementsByClassName('close')[0];
 
     span.onclick = function() {
-    modal.style.display = 'none';
+        modal.style.display = 'none';
     }
 
     window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = 'none';
-    }
+        if (event.target == modal) {
+            modal.style.display = 'none';
+        }
     }
 }

@@ -135,7 +135,12 @@ window.onload = function() {
     }
 
     function validateDateOfBirth(e) {
-        dateOfBirthValidationRes= e.target.value;
+        if (Date.parse(e.target.value) > Date.now()) {
+            error[3].style.visibility = 'visible';
+            dateOfBirthValidationRes = 'Invalid value';
+        } else {
+            dateOfBirthValidationRes= e.target.value;
+        }
     }
 
     function removeErrorDateOfBirth(e) {
@@ -180,7 +185,7 @@ window.onload = function() {
 
     function validateLocation(e) {
         if(quantityLetters(e.target.value)){
-            if(isASymbol(e.target.value) || !containsNumber(e.target.value) ){
+            if(isASymbol(e.target.value)){
                 error[6].style.visibility = 'visible';
                 locationValidationRes = 'Invalid value';
             } else {
@@ -290,12 +295,11 @@ window.onload = function() {
         var symbols = '!"#$%&/()=?¡¿|¨*][_:;,.-{}+¬°~^`@'+"'";
         var control = 0;
         for (var i=0; i < string.length; i++) {
-            for(var x=0;x < symbols.length;x++) {
-                if (string[i] == symbols[x]) {
-                    control ++;
-                }
+            if (symbols.includes(string[i])){
+                control ++;
             }
         }
+    
         //returns true if the string contains a special character
         if (control == 0) {
             return false;
@@ -358,13 +362,9 @@ window.onload = function() {
     inputRepeatPassword.value = localStorage.getItem('password2') ? localStorage.getItem('password2') : '';
 
     // Button
-
     
     function result(e){
-        
         e.preventDefault();
-        
-        // modal.style.display = "block";
         nameValue.innerHTML = nameValidationRes;
         lastNameValue.innerHTML = lastNameValidationRes;
         dniValue.innerHTML = dniValidationRes;
@@ -377,24 +377,7 @@ window.onload = function() {
         passwordValue.innerHTML = passwordValidationRes;
         repeatPasswordValue.innerHTML = repeatPasswordValidationRes;
 
-        // TEST
-        
-        // inputName.value = 'Jorge';
-        // inputLastName.value = 'Alvarez';
-        // inputDni.value = '16738476';
-        // // inputDateOfBirth.value = '1990/04/04';
-        // inputPhoneNumber.value = '3415847236'; 
-        // inputAddress.value = 'Oroño 1500';
-        // inputLocation.value = 'Rosario';
-        // inputPostalCode.value = '2000';
-        // inputEmail.value = 'jorge@gmail.com';
-        // inputPassword.value = 'dinamite123';
-        // inputRepeatPassword.value = 'dinamite123';
-
-        // Transform DATE
-
         var dateTransformedForApi = transformDateRequest(inputDateOfBirth.value);
-
         var control = 0;
 
         for (var i=0; i <= 10; i++){
@@ -406,7 +389,6 @@ window.onload = function() {
         console.log(control);
 
         if (control == 0){
-            //FETCH
             fetch('https://basp-m2022-api-rest-server.herokuapp.com/signup?name=' + inputName.value 
             + '&lastName=' + inputLastName.value + '&dni=' + inputDni.value + '&dob=' + 
             dateTransformedForApi + '&phone=' + inputPhoneNumber.value + 
@@ -419,41 +401,35 @@ window.onload = function() {
             .then(function (jsonResponse) {
                 console.log("json", jsonResponse);
                 if (jsonResponse.success) {
-                console.log("Good", jsonResponse);
-                // LÓGICA CUANDO LA REQUEST ES EXITOSA Y MOSTRAR UN ALERT
-
-                localStorage.setItem('name', jsonResponse.data.name);
-                localStorage.setItem('lastName', jsonResponse.data.lastName);
-                localStorage.setItem('dni', jsonResponse.data.dni);
-                localStorage.setItem('dob', jsonResponse.data.dob);
-                localStorage.setItem('phone', jsonResponse.data.phone);
-                localStorage.setItem('address', jsonResponse.data.address);
-                localStorage.setItem('city', jsonResponse.data.city);
-                localStorage.setItem('zip', jsonResponse.data.zip);
-                localStorage.setItem('email', jsonResponse.data.email);
-                localStorage.setItem('password', jsonResponse.data.password[0]);
-                localStorage.setItem('password2', jsonResponse.data.password[1]);
-
-                //Object.entries()
-
-                modal.style.display = "block";
-                modalSign.style.color = '#AACE9B';
-                modalSign.innerHTML = 'SUCCESS';
+                    console.log("Good", jsonResponse);
+                    localStorage.setItem('name', jsonResponse.data.name);
+                    localStorage.setItem('lastName', jsonResponse.data.lastName);
+                    localStorage.setItem('dni', jsonResponse.data.dni);
+                    localStorage.setItem('dob', jsonResponse.data.dob);
+                    localStorage.setItem('phone', jsonResponse.data.phone);
+                    localStorage.setItem('address', jsonResponse.data.address);
+                    localStorage.setItem('city', jsonResponse.data.city);
+                    localStorage.setItem('zip', jsonResponse.data.zip);
+                    localStorage.setItem('email', jsonResponse.data.email);
+                    localStorage.setItem('password', jsonResponse.data.password[0]);
+                    localStorage.setItem('password2', jsonResponse.data.password[1]);
+                    modal.style.display = "block";
+                    modalSign.style.color = '#AACE9B';
+                    modalSign.innerHTML = 'Employee created successfully';
                 } else {
-                throw jsonResponse;
+                    throw jsonResponse;
                 }
             })
             .catch(function (error) {
                 console.warn('Error', error);
-            // LÓGICA CUANDO LA REQUEST SALE MAL
                 modal.style.display = "block";
                 modalSign.style.color = '#d72d0f';
-                modalSign.innerHTML = 'ERROR API';
+                modalSign.innerHTML = 'Error: Please correct invalid values';
             })
         } else {
             modal.style.display = "block";
             modalSign.style.color = '#d72d0f';
-            modalSign.innerHTML = 'ERROR UI';
+            modalSign.innerHTML = 'Error: Please correct invalid values';
         }
     }
 
@@ -463,12 +439,12 @@ window.onload = function() {
     var span = document.getElementsByClassName('close')[0];
 
     span.onclick = function() {
-    modal.style.display = 'none';
+        modal.style.display = 'none';
     }
 
     window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = 'none';
-    }
+        if (event.target == modal) {
+            modal.style.display = 'none';
+        }
     }
 }
